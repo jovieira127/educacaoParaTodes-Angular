@@ -40,7 +40,7 @@ import { FeedComponent } from './feed/feed.component';
     TelaHomeComponent,
     PerfilVoluntarioComponent,
     PerfilEstudanteComponent,
-    FeedComponent
+    FeedComponent,
   ],
   imports: [
     BrowserModule,
