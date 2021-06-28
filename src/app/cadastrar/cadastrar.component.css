@@ -1,0 +1,95 @@
+.corFundoCadastro{
+    background-color: #eff3b1;
+}
+
+.fraseInicio{
+    color: orange
+}
+
+
+#img-bg{
+    background-image: url('https://i.imgur.com/gkeC3ug.png');
+    
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+    }
+
+    .cadastro-container{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #090a6e;
+        
+    } 
+    
+   /*  form{
+       padding-top: 10px;
+       font-size: 14px; 
+       margin-top: 30px;
+    } */
+   
+    .cadastro-form{
+        width: 550px;
+        height: 750px;
+        margin: 20px;
+        background: #ee9c4f !important;
+        border-radius: 20px !important;
+   
+    }
+   
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        border: 2px solid #e93119;
+        border-radius: 10px;
+        margin-bottom: 25px;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="password"]:focus{
+        outline: none; 
+       border: none;
+       background: #fac9a8;
+       margin: 0;
+    }
+
+ 
+
+    .form-control{
+        border: 2px solid #e93119;
+        border-radius: 10px;
+        padding-top: 10px; 
+       
+    }
+   
+    .card-title{
+       font-weight: 900;
+       padding-top: 5px;
+   }
+   
+   .btn{
+       
+       background: #d33d0f!important;
+       font-size: 14px;
+       transform: translateY(10px);
+       border-radius:10px !important;
+       font-weight: bold;
+       cursor: pointer;
+       text-transform: uppercase;
+       border-color: #d33d0f;
+
+   }
+
+   .btn:hover{
+       background: #090a6e;
+   }
+
+    
+
+
+   
