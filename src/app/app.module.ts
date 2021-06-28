@@ -9,6 +9,17 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { SaibaMaisComponent } from './saiba-mais/saiba-mais.component';
 import { TimeComponent } from './time/time.component';
+import { TelaVisualizacaoComponent } from './tela-visualizacao/tela-visualizacao.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
+import { MenuLateralComponent } from './menu-lateral/menu-lateral.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -17,12 +28,21 @@ import { TimeComponent } from './time/time.component';
     CadastrarComponent,
     RodapeComponent,
     SaibaMaisComponent,
-    TimeComponent
+    TimeComponent,
+    TelaVisualizacaoComponent,
+    MenuLateralComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatButtonModule,
+    MatIconModule,
+    MatDividerModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
