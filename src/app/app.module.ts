@@ -22,6 +22,7 @@ import { MenuLateralComponent } from './menu-lateral/menu-lateral.component';
 
 import { MenuSuperiorComponent } from './menu-superior/menu-superior.component';
 import { TelaHomeComponent } from './tela-home/tela-home.component';
+import { FeedComponent } from './feed/feed.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { TelaHomeComponent } from './tela-home/tela-home.component';
     TelaVisualizacaoComponent,
     MenuLateralComponent,
     MenuSuperiorComponent,
-    TelaHomeComponent
+    TelaHomeComponent,
+    FeedComponent
   ],
   imports: [
     BrowserModule,
