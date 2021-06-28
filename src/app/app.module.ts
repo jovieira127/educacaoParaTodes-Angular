@@ -11,6 +11,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
+import { MenuLateralComponent } from './menu-lateral/menu-lateral.component';
 
 
 
@@ -18,7 +19,8 @@ import { MatDividerModule } from '@angular/material/divider';
 @NgModule({
   declarations: [
     AppComponent,
-    TelaVisualizacaoComponent
+    TelaVisualizacaoComponent,
+    MenuLateralComponent
   ],
   imports: [
     BrowserModule,
