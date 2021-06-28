@@ -23,6 +23,7 @@ import { MenuLateralComponent } from './menu-lateral/menu-lateral.component';
 import { MenuSuperiorComponent } from './menu-superior/menu-superior.component';
 import { TelaHomeComponent } from './tela-home/tela-home.component';
 import { PerfilVoluntarioComponent } from './perfil-voluntario/perfil-voluntario.component';
+import { PerfilEstudanteComponent } from './perfil-estudante/perfil-estudante.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { PerfilVoluntarioComponent } from './perfil-voluntario/perfil-voluntario
     MenuLateralComponent,
     MenuSuperiorComponent,
     TelaHomeComponent,
-    PerfilVoluntarioComponent
+    PerfilVoluntarioComponent,
+    PerfilEstudanteComponent
   ],
   imports: [
     BrowserModule,
