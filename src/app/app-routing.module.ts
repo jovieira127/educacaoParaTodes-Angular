@@ -1,6 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
+import { FeedComponent } from './feed/feed.component';
 import { LoginComponent } from './login/login.component';
 import { MenuSuperiorComponent } from './menu-superior/menu-superior.component';
 import { RodapeComponent } from './rodape/rodape.component';
@@ -19,7 +20,8 @@ const routes: Routes = [
   {path: 'saiba-mais', component: SaibaMaisComponent},
   {path: 'time', component: TimeComponent},
   {path: 'menu-superior', component: MenuSuperiorComponent},
-  {path: 'tela-home', component: TelaHomeComponent}
+  {path: 'tela-home', component: TelaHomeComponent},
+  {path: 'feed', component: FeedComponent},
 ];
 
 
