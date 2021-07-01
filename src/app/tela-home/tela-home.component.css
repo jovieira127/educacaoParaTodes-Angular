@@ -1,0 +1,14 @@
+.entrelinhas{
+    line-height: 1.2;
+}
+/* Color Theme Swatches in Hex */
+.Idyllic-View-Of-Starry-Sky-1-hex { color: #011140; }
+.Idyllic-View-Of-Starry-Sky-2-hex { color: #0B368C; }
+.Idyllic-View-Of-Starry-Sky-3-hex { color: #04080D; }
+.Idyllic-View-Of-Starry-Sky-4-hex { color: #0C1726; }
+.Idyllic-View-Of-Starry-Sky-5-hex { color: #626973; }
+
+#img-bg{
+    background-image: url('https://i.imgur.com/UdzQ42R.jpg');
+
+  }

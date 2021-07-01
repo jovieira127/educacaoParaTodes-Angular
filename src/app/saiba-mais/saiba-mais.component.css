@@ -1,0 +1,21 @@
+/* .container-fluid{
+    height: 40rem;
+    width: 100rem;
+    
+} */
+.bg-cor{
+    background-color: #E8EAF6;
+}
+.tx-cor{
+    color: #222956;
+    font-family: 'Lato', sans-serif;
+    font-size: 21px;
+}
+.entrelinhas{
+    line-height: 1.2;
+}
+.tx-titulo{
+    color: #222956;
+    font-family: 'Lato', sans-serif;
+    font-size: 31px;
+}
