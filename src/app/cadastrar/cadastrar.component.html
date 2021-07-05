@@ -1,81 +1,60 @@
-<body class="corFundoCadastro">
+<div class="imagemFundo">
+    <div class="container col-md-4 mt-4 mb-4">
+        <div class="login-form">
+            <div class="col-md-12">
+                <h2>Cadastro</h2>
 
-    <img class="logo" src="https://i.imgur.com/HZeY0A2.png" width="150px" height="50px" class="rounded float-right"
-        alt="Logo">
-
-    <br>
-    <br>
-    <br>
-
-    <h1 class="fraseInicio m-5">Cadastre-se e comece a interagir e aprender <br>com as mais diversas pessoas!</h1>
-
-    <div class="container">
-        <div class="row">
-
-            <div class="col-md-6 mb-5 mt-5">
-
-                <div class="cadastroContainer">
-                    <div class="card cadastro-form col-md-12">
-                        <div class="col-md12 mb-6 mt-5">
-                            <div class="row d-flex justify-content-center">
-
-
-                                <h2 class="text-center mb-3">Cadastro</h2>
-
-                                <div class="form-group">
-                                    <label for="nome">Nome Completo:</label>
-                                    <input [(ngModel)]='usuario.nome' type="text" class="form-control" name="nome" id="nome"
-                                        placeholder="Digite seu nome completo" />
-                                </div>
-
-                                <div class="form-group mb-0">
-                                    <div class="row">
-                                        <div class="col">
-                                            <label for="email">Email:</label>
-                                            <input [(ngModel)]='usuario.email'class="form-control" type="email" name="email" id="email"
-                                                placeholder="Digite seu email">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="form-group mb-0">
-                                    <label for="senha">Senha</label>
-                                    <input (input)='confirmaSenha($event)' class="form-control" type="password" name="senha" id="senha"
-                                        placeholder="Digite sua senha">
-                                </div>
-
-                                <div class="form-group mb-0">
-                                    <label for="confirmSenha">Confirmar Senha</label>
-                                    <input [(ngModel)]='usuario.senha'class="form-control" type="password" name="confirmSenha" id="confirmSenha"
-                                        placeholder="Confirme sua senha">
-                                </div>
-
-                                <div class="form-group mb-0">
-                                    <label for="foto">Link da Foto</label>
-                                    <input [(ngModel)]='usuario.foto' class="form-control" type="text" name="foto" id="foto"
-                                        placeholder="Digite o link da sua foto de perfil">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="tipo">Tipo de Cadastro</label>
-                                    <select class="form-control" name="tipo" id="tipo" (change)='selecionarUsuario($event)'>
-                                        <option>Selecione um tipo de cadastro:</option>
-                                        <option value="estudante">Quero ser Estudante!</option>
-                                        <option value="voluntarie">Quero ser Voluntárie!</option>
-                                    </select>
-                                </div>
-
-                                <div class="d-flex justify-content-right">
-                                    <button type="submit" class="btn btn-success" (click)='cadastrar()'>Cadastrar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="form-group">
+                    <i class="fa fa-id-card-o p-2" aria-hidden="true"></i>
+                    <label for="nome">Nome Completo:</label>
+                    <input [(ngModel)]='usuario.nome' type="text" class="backgroundInput" name="nome" id="nome"
+                        placeholder="  Digite seu nome completo" />
                 </div>
+
+                <div class="form-group">
+                    <i class="fa fa-user-circle p-2" aria-hidden="true"></i>
+                    <label for="email">Email:</label>
+                    <input [(ngModel)]='usuario.email' class="backgroundInput" type="email" name="email" id="email"
+                        placeholder="  Digite seu email">
+                </div>
+
+
+                <div class="form-group">
+                    <i class="fa fa-lock p-2" aria-hidden="true"></i>
+                    <label for="senha">Senha</label>
+                    <input (input)='confirmaSenha($event)' class="backgroundInput" type="password" name="senha"
+                        id="senha" placeholder="  Digite sua senha" />
+                </div>
+
+                <div class="form-group">
+                    <i class="fa fa-lock p-2" aria-hidden="true"></i>
+                    <label for="confirmSenha">Confirmar Senha</label>
+                    <input [(ngModel)]='usuario.senha' class="backgroundInput" type="password" name="confirmSenha"
+                        id="confirmSenha" placeholder="  Confirme sua senha">
+                </div>
+
+                <div class="form-group">
+                    <i class="fa fa-camera p-2" aria-hidden="true"></i>
+                    <label for="foto">Link da Foto</label>
+                    <input [(ngModel)]='usuario.foto' class="backgroundInput" type="text" name="foto" id="foto"
+                        placeholder="  Digite o link da sua foto de perfil">
+                </div>
+
+                <div class="form-group">
+                    <i class="fa fa-users p-2" aria-hidden="true"></i>
+                    <label for="tipo">Tipo de Cadastro</label>
+                    <select class="backgroundInput" name="tipo" id="tipo" (change)='selecionarUsuario($event)'>
+                        <option class="text-dark" >  Selecione um tipo de cadastro</option>
+                        <option class="text-dark" value="estudante">Quero ser Estudante!</option>
+                        <option class="text-dark"  value="voluntarie">Quero ser Voluntárie!</option>
+                    </select>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <button type="submit" (click)='cadastrar()'>Cadastrar</button>
+                </div>
+
             </div>
-            <div class="col-md-6" id="img-bg"></div>
         </div>
-
     </div>
-
-</body>
+</div>
