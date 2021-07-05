@@ -1,0 +1,46 @@
+.br-50{
+    border-radius: 50%;
+    margin-bottom: 10px; 
+    display: block;
+    margin-right:100%
+    
+    
+}
+
+.social-network{
+    list-style: none;
+    padding: 0;
+    
+}
+
+.social-network li{
+    display: inline;
+}
+
+.bg-cor{
+    background-color:#d9bca8
+    
+}
+
+.mr-1{
+    margin-top: 50px;
+}
+
+.fa{
+    font-size: 15pt;
+    padding: 4px;
+}
+
+.fa-github-square:hover{
+    color: black;
+}
+
+.card{
+    background-position: center;
+    background-size: cover;
+
+}
+
+.mr-6{
+    margin-bottom: 10px;
+}
