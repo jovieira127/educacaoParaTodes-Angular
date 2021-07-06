@@ -1,15 +1,45 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
+import { Tema } from '../model/Tema';
+import { TemaService } from '../service/perfil-voluntario.service';
 
 @Component({
-  selector: 'app-perfil-voluntario',
-  templateUrl: './perfil-voluntario.component.html',
-  styleUrls: ['./perfil-voluntario.component.css']
+  selector: 'app-tema',
+  templateUrl: './tema.component.html',
+  styleUrls: ['./tema.component.css']
 })
-export class PerfilVoluntarioComponent implements OnInit {
+export class TemaComponent implements OnInit {
 
-  constructor() { }
+  tema: Tema = new Tema()
+  listaTemas:  Tema[]
 
-  ngOnInit(): void {
+  constructor(
+    private router: Router,
+    private temaService: TemaService
+  ) { }
+
+  ngOnInit(){
+    if(environment.token == ''){
+      this.router.navigate(['/entrar'])
+    }
+  /*   this.temaService.refreshToken()
+    this.findAllTemas() */
+  }
+
+  findAllTemas(){
+    this.temaService.getAllTema().subscribe((resposta:Tema[]) => {
+      this.listaTemas = resposta
+    })
+  }
+
+  cadastrar(){
+    this.temaService.postTema(this.tema).subscribe((resposta:Tema)=>{
+      this.tema = resposta
+      alert('Tema cadastrado com sucesso!')
+      this.findAllTemas()
+      this.tema = new Tema()
+    })
   }
 
 }
