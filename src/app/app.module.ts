@@ -10,6 +10,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
+import { PerfilAdicionarVideosComponent } from './perfil-adicionar-videos/perfil-adicionar-videos.component';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -41,7 +42,8 @@ import { FeedComponent } from './feed/feed.component';
     TelaHomeComponent,
     PerfilVoluntarioComponent,
     PerfilEstudanteComponent,
-    FeedComponent,
+    FeedComponent,   
+    PerfilAdicionarVideosComponent
   ],
   imports: [
     BrowserModule,

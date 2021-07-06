@@ -1,0 +1,22 @@
+.tamanho-menu {
+    width: 300px;
+}
+.borda-btn{
+    border-radius: 10px;
+}
+.borda-btn:hover{
+    background-color: blue;
+}
+
+.form-size{
+    height: 100px;
+
+}
+
+.border{
+    border: solid 0.2rem;
+    color: blue;
+    border-radius: 10px;
+    margin-left:30px;
+    height: 400px;
+}
