@@ -32,12 +32,9 @@ export class LoginComponent implements OnInit {
       environment.id = this.usuarioLogin.id
 
       console.log(environment.token)
-      console.log(environment.nome)
-      console.log(environment.foto)
-      console.log(environment.id)
+      
 
-
-      this.router.navigate(['/feed'])
+      this.router.navigate(['/perfil-voluntario'])
     }, erro =>{
       if(erro.status == 401){
         alert("Usuário ou senha inválidos")

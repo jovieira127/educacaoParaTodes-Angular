@@ -1,4 +1,44 @@
+<app-menu-superior></app-menu-superior>
+<div class="col-3 tamanho-menu">
+
+
+    <img src="" alt="Foto Perfil" width="80px" height="80px" class="rounded-circle margen-fotos margen-fotos">
+
+    <div class="modal-body">
+      <ul class="list-group list-group-flush">
+        
+        <button class="btn btn-outline-light" type="submit">
+          <li class="list-group-item bg-primary borda-botao cor-letra">Tutorial</li>
+        </button>
+
+        <button class="btn btn-outline-light" type="submit">
+          <li class="list-group-item bg-primary borda-botao cor-letra">Editar perfil</li>
+        </button>
+
+        <button class="btn btn-outline-light" type="submit">
+
+         
+
+          <li class="list-group-item bg-primary borda-botao cor-letra"> <a class="text-white" routerLink='/perfil-adicionar-videos'>Adicionar conteudo </a>
+          </li>
+          
+
+        </button>
+
+        <button class="btn btn-outline-light" type="submit">
+          <li class="list-group-item bg-primary borda-botao cor-letra">Feed</li>
+        </button>
+
+      </ul>
+      
+    </div>
+  </div>
+
+
+
+
 <div class="col-md-6 ms-5 mt-5 d-flex">
+
     <div class="form-group">
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Título do vídeo</label>
@@ -23,14 +63,41 @@
               <div class="form-group mb-5 mt-3">
                   <label for="tipo">Tema</label>
                   <select class="form-control" name="tipo" id="tipo">
-                      <option>Selecione a matéria que você aborda no vídeo:</option>
-                      <option value="portugues">Português</option>
-                      <option value="matematica">Matemática</option>
-                      <option value="quimica">Química</option>
-                      <option value="filosofia">Filosofia</option>
+                      <option *ngFor='let tema of listaTemas'>{{tema.descricao}}</option>
+                      
                   </select>
+                  <a class="btn btn-light me-2" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  href="">Cadastrar novo Tema</a>
+                  <a class="btn btn-info me-2" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  href="">Editar Tema</a>
+                  <a class="btn btn-danger me-2" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  href="">Apagar Tema</a>
+                  
               </div>
               <button type="submit" class="btn btn-primary mt-5 mb-5">Adicionar</button>
             </div>
        </div>
-    
+    <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Cadastro de Tema</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+              <label for="titulo">Título</label>
+              <input [(ngModel)]='tema.descricao' type="text" class="form-control" id="titulo" placeholder="título">
+          </div>
+          
+       
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" (click)='cadastrar()' class="btn btn-success" data-bs-dismiss="modal">Salvar </button>
+        </div>
+      </div>
+    </div>
+  </div>

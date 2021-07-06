@@ -5,10 +5,11 @@ import { FeedComponent } from './feed/feed.component';
 import { LoginComponent } from './login/login.component';
 import { MenuLateralComponent } from './menu-lateral/menu-lateral.component';
 import { MenuSuperiorComponent } from './menu-superior/menu-superior.component';
+import { PerfilAdicionarVideosComponent } from './perfil-adicionar-videos/perfil-adicionar-videos.component';
+import { PerfilVoluntarioComponent } from './perfil-voluntario/perfil-voluntario.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { SaibaMaisComponent } from './saiba-mais/saiba-mais.component';
 import { TelaHomeComponent } from './tela-home/tela-home.component';
-import { TemaComponent } from './tema/tema.component';
 import { TimeComponent } from './time/time.component';
 
 const routes: Routes = [
@@ -24,8 +25,10 @@ const routes: Routes = [
   {path: 'menu-superior', component: MenuSuperiorComponent},
   {path: 'tela-home', component: TelaHomeComponent},
   {path: 'feed', component: FeedComponent},
-  {path: 'tema', component: TemaComponent},
   {path: 'menu-lateral', component: MenuLateralComponent},
+  {path: 'perfil-adicionar-videos', component: PerfilAdicionarVideosComponent},
+  {path: 'perfil-voluntario', component: PerfilVoluntarioComponent}
+
 ];
 
 
