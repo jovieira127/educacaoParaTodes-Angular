@@ -7,6 +7,7 @@ import { MenuSuperiorComponent } from './menu-superior/menu-superior.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { SaibaMaisComponent } from './saiba-mais/saiba-mais.component';
 import { TelaHomeComponent } from './tela-home/tela-home.component';
+import { TemaComponent } from './tema/tema.component';
 import { TimeComponent } from './time/time.component';
 
 const routes: Routes = [
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path: 'menu-superior', component: MenuSuperiorComponent},
   {path: 'tela-home', component: TelaHomeComponent},
   {path: 'feed', component: FeedComponent},
+  {path: 'tema', component: TemaComponent}
 ];
 
 
