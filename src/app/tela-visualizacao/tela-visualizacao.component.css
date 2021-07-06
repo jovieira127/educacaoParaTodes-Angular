@@ -1,71 +1,23 @@
 
 
 .mat-sidenav{
-    margin: 16px;
-    width: 200px;
-    border-right: none;
-    background-color: rgb(39, 39, 39);
+    border: solid 0.1rem;
     border-radius: 10px;
-    padding: 16px;
     text-align: center;
-}
-
-.conteudo{
-    height: 500px;
-    margin: 16px;
-    margin-left: 0px;
-    display: flex;
-    width: 238px;
-    background-color: aqua;
-    border-bottom-right-radius: 20px;
-    border-top-right-radius: 20px;
-    margin-top: 0;
-}
-
-.mat-sidenav-container{
-    height: 600px;
-    display: flex;
-    width: 300px;
-}
-    
-
-.botoes-menu {
-    width: 280px;
-    height: 40px;
-    margin-right: 10px;
-    
-
-
-}
-
-.botoes-menu-primeiro {
-    width: 280px;
-    margin-right: 10px;
-    margin-top: 100px;
-    height: 40px;
-
-
-}
-
-.container-menu-videos{
-    height: 515px;
+    border-color: #46c46e;
+    height: 440px;
     width: 350px;
-    display: flex;
 }
 
-.modal{
-    width: 300px;
-
+.card{
+    width: 53.8rem;
+    height: 10rem;
 }
 
-.modal-content{
-    width: 300px;
+.h4{
+    margin-bottom: 60px;
 }
 
 .list-group-item:hover{
-    background-color: blue;
-}
-
-.container-comentarios{
-    width: 560px;
+    background-color: #46c46e;
 }
