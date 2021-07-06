@@ -1,122 +1,117 @@
-<div class="collapse" id="navbarToggleExternalContent">
-    <div class="bg-dark p-4">
-      <h5 class="text-white h4">Collapsed content</h5>
-      <span class="text-muted">Toggleable via the navbar brand.</span>
-    </div>
-  </div>
-  
-  <!--NavBar-->
-  <nav class="navbar navbar-light bg-primary">
-    <div class="container-fluid">
-      <button class="navbar-toggler" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-  
-      <div>
-        <li class="nav-item active">
-          <img src="" alt="Logo" width="50px" height="50px" class="img-fluid rounded-circle">
-        </li>
-      </div>
-  
-      <button class="btn btn-outline-light" type="submit">Sair</button>
-    </div>
-  </nav>
-  <!--/NavBar-->
-  
-  
+<!--NavBar-->
+<nav class="navbar navbar-ligth bg-primary">
   <div class="container-fluid">
-    <div class="row d-flex">
-      <h2 class="d-flex justify-content-center">Olá Voluntario!!!</h2>
-      <p class="d-flex justify-content-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-      <div class="col-3 tamanho-menu">
-        <div class="modal-body">
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Feed</li>
-            <li class="list-group-item">Meu perfil</li>
-            <li class="list-group-item">Minhas gravações</li>
-            <li class="list-group-item">Minhas listas de exercícios</li>
-            <li class="list-group-item">Materiais complementares</li>
-            <li class="list-group-item">Configurações</li>
-          </ul>
-        </div>
+    <div>
+        <img src="" alt="Logo" width="50px" height="50px" class="rounded-circle">
+    </div>
+    <button class="btn btn-outline-light" type="submit">Sair</button>
+  </div>
+</nav>
+<!--/NavBar-->
+
+<div class="container-fluid">
+  <div class="row d-flex">
+    
+    <!--Titulo-->
+    <div class="row">
+      <div class="col-12">
+        <h2 class="d-flex justify-content-center margen-titulo">Olá Voluntario!!!</h2>
+        <p class="d-flex justify-content-center margen-discricao">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
       </div>
-      <div class="col-9">
-        <div class="container-fluid">
-          <div class="row d-flex">
-            <div class="col">
-              <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
-                <div class="card-body">
-                  <h5 class="card-title"></h5>
-                  <p class="card-text">Adicionar uma nova gravação.</p>
-                  <a href="#" class="btn btn-primary">Entrar</a>
+    </div>
+    <!--/Titulo-->
+
+    <div class="row">
+      <div class="col">
+       
+        <!--Menu-->
+        <div class="col-3 tamanho-menu">
+
+          <img src="" alt="Foto Perfil" width="80px" height="80px" class="rounded-circle margen-fotos margen-fotos">
+
+          <div class="modal-body">
+            <ul class="list-group list-group-flush">
+              
+              <button class="btn btn-outline-light" type="submit">
+                <li class="list-group-item bg-primary borda-botao cor-letra">Tutorial</li>
+              </button>
+
+              <button class="btn btn-outline-light" type="submit">
+                <li class="list-group-item bg-primary borda-botao cor-letra">Editar perfil</li>
+              </button>
+
+              <button class="btn btn-outline-light" type="submit">
+                <li class="list-group-item bg-primary borda-botao cor-letra">Adicionar conteudo</li>
+              </button>
+
+              <button class="btn btn-outline-light" type="submit">
+                <li class="list-group-item bg-primary borda-botao cor-letra">Feed</li>
+              </button>
+
+            </ul>
+          </div>
+        </div>
+        <!--/Menu-->
+
+      </div>
+      
+      <div class="col margen-cards">
+        <!--Cards-->
+        <div class="col">
+          <div class="container-fluid">
+            <div class="row d-flex">
+              <div class="col margen-cards">
+                <div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
+                  <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <p class="card-text">Favoritados.</p>
+                    <a href="#" class="btn btn-primary">Entrar</a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col">
-              <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
-                <div class="card-body">
-                  <h5 class="card-title"></h5>
-                  <p class="card-text">Adicionar lista de exercicios.</p>
-                  <a href="#" class="btn btn-primary">Entrar</a>
+
+              <div class="col margen-cards">
+                <div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
+                  <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <p class="card-text">Exercicios pendentes.</p>
+                    <a href="#" class="btn btn-primary">Entrar</a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          
-          <div class="row d-flex">
-            <div class="col">
-              <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
-                <div class="card-body">
-                  <h5 class="card-title"></h5>
-                  <p class="card-text">Comentarios não respondidos.</p>
-                  <a href="#" class="btn btn-primary">Entrar</a>
-                </div>
+        </div>
+      </div>    
+
+      <div class="col margen-cards">
+        <div class="row d-flex">
+          <div class="col margen-cards">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
+              <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text">Continue assistindo.</p>
+                <a href="#" class="btn btn-primary">Entrar</a>
               </div>
             </div>
-  
-            <div class="col">
-              <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
-                <div class="card-body">
-                  <h5 class="card-title"></h5>
-                  <p class="card-text">Adicionar materias complementares.</p>
-                  <a href="#" class="btn btn-primary">Entrar</a>
-                </div>
+          </div>
+
+          <div class="col margen-cards">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
+              <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text">Sugestões.</p>
+                <a href="#" class="btn btn-primary">Entrar</a>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <!--/ Cards-->
     </div>
   </div>
-  
-  
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-fullscreen	">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Menu</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <img src="" alt="Foto de perfil" width="50px" height="50px" class="img-fluid rounded-circle">
-          <br>
-          <br>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Feed</li>
-            <li class="list-group-item">Meu perfil</li>
-            <li class="list-group-item">Minhas gravações</li>
-            <li class="list-group-item">Minhas listas de exercícios</li>
-            <li class="list-group-item">Materiais complementares</li>
-            <li class="list-group-item">Configurações</li>
-          </ul>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
-        </div>
-      </div>
-    </div>
-  </div>
+</div>
