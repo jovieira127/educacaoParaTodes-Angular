@@ -4,3 +4,14 @@
     align-content: space-between;
   }
 
+  .card{
+    width: 300px;
+  }
+  
+  .borda-botao {
+    border-radius: 30px;
+  }
+  
+  .cor-letra {
+    color: white;
+  }
