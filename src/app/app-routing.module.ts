@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { FeedComponent } from './feed/feed.component';
 import { LoginComponent } from './login/login.component';
+import { MenuLateralComponent } from './menu-lateral/menu-lateral.component';
 import { MenuSuperiorComponent } from './menu-superior/menu-superior.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { SaibaMaisComponent } from './saiba-mais/saiba-mais.component';
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path: 'menu-superior', component: MenuSuperiorComponent},
   {path: 'tela-home', component: TelaHomeComponent},
   {path: 'feed', component: FeedComponent},
+  {path: 'menu-lateral', component: MenuLateralComponent},
 ];
 
 

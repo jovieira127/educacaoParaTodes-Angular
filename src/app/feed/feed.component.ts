@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuLateralComponent } from './menu-lateral/menu-lateral.component';
 
 @Component({
   selector: 'app-feed',
