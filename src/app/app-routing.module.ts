@@ -24,7 +24,7 @@ const routes: Routes = [
   {path: 'menu-superior', component: MenuSuperiorComponent},
   {path: 'tela-home', component: TelaHomeComponent},
   {path: 'feed', component: FeedComponent},
-  {path: 'tema', component: TemaComponent}
+  {path: 'tema', component: TemaComponent},
   {path: 'menu-lateral', component: MenuLateralComponent},
 ];
 
