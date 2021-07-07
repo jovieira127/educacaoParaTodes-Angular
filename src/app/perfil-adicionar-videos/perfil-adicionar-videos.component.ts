@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Tema } from '../model/Tema';
-import { TemaService } from '../service/perfil-voluntario.service';
+import { TemaService } from '../service/tema.service';
+
 
 @Component({
   selector: 'app-perfil-adicionar-videos',
@@ -14,28 +15,29 @@ export class PerfilAdicionarVideosComponent implements OnInit {
 
   tema: Tema = new Tema()
   listaTemas: Tema[]
+  
 
   constructor(
     private router: Router,
-    private perfilService: TemaService
+    private temaService: TemaService
   ) { }
 
   ngOnInit() {
     if (environment.token == '') {
       this.router.navigate(['/login'])
     }
-    this.perfilService.refreshToken()
+    this.temaService.refreshToken()
     this.findAllTemas()
   }
 
   findAllTemas() {
-    this.perfilService.getAllTema().subscribe((resp: Tema[]) => {
+    this.temaService.getAllTema().subscribe((resp: Tema[]) => {
       this.listaTemas = resp
     })
   }
-
+  
   cadastrar() {
-    this.perfilService.postTema(this.tema).subscribe((resp: Tema) => {
+    this.temaService.postTema(this.tema).subscribe((resp: Tema) => {
       this.tema = resp
       alert('tema cadastrado com sucesso')
      this.findAllTemas()

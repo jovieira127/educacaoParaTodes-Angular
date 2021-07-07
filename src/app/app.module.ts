@@ -25,6 +25,9 @@ import { TelaHomeComponent } from './tela-home/tela-home.component';
 import { PerfilVoluntarioComponent } from './perfil-voluntario/perfil-voluntario.component';
 import { PerfilEstudanteComponent } from './perfil-estudante/perfil-estudante.component';
 import { FeedComponent } from './feed/feed.component';
+import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
+import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
 
@@ -43,7 +46,7 @@ import { FeedComponent } from './feed/feed.component';
     PerfilVoluntarioComponent,
     PerfilEstudanteComponent,
     FeedComponent,   
-    PerfilAdicionarVideosComponent, 
+    PerfilAdicionarVideosComponent, TemaEditComponent, TemaDeleteComponent, 
   ],
   imports: [
     BrowserModule,
@@ -59,7 +62,10 @@ import { FeedComponent } from './feed/feed.component';
     FormsModule,
     
   ],
-  providers: [],
+  providers: [{
+    provide: LocationStrategy,
+    useClass: HashLocationStrategy
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

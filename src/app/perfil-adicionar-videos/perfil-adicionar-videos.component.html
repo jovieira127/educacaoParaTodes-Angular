@@ -2,102 +2,159 @@
 <div class="col-3 tamanho-menu">
 
 
-    <img src="" alt="Foto Perfil" width="80px" height="80px" class="rounded-circle margen-fotos margen-fotos">
+  <img src="" alt="Foto Perfil" width="80px" height="80px" class="rounded-circle margen-fotos margen-fotos">
 
-    <div class="modal-body">
-      <ul class="list-group list-group-flush">
-        
-        <button class="btn btn-outline-light" type="submit">
-          <li class="list-group-item bg-primary borda-botao cor-letra">Tutorial</li>
-        </button>
+  <div class="modal-body">
+    <ul class="list-group list-group-flush">
 
-        <button class="btn btn-outline-light" type="submit">
-          <li class="list-group-item bg-primary borda-botao cor-letra">Editar perfil</li>
-        </button>
+      <button class="btn btn-outline-light" type="submit">
+        <li class="list-group-item bg-primary borda-botao cor-letra">Tutorial</li>
+      </button>
 
-        <button class="btn btn-outline-light" type="submit">
+      <button class="btn btn-outline-light" type="submit">
+        <li class="list-group-item bg-primary borda-botao cor-letra">Editar perfil</li>
+      </button>
 
-         
+      <button class="btn btn-outline-light" type="submit">
 
-          <li class="list-group-item bg-primary borda-botao cor-letra"> <a class="text-white" routerLink='/perfil-adicionar-videos'>Adicionar conteudo </a>
-          </li>
-          
 
-        </button>
 
-        <button class="btn btn-outline-light" type="submit">
-          <li class="list-group-item bg-primary borda-botao cor-letra">Feed</li>
-        </button>
+        <li class="list-group-item bg-primary borda-botao cor-letra"> <a class="text-white"
+            routerLink='/perfil-adicionar-videos'>Adicionar conteudo </a>
+        </li>
 
-      </ul>
-      
-    </div>
+
+      </button>
+
+      <button class="btn btn-outline-light" type="submit">
+        <li class="list-group-item bg-primary borda-botao cor-letra">Feed</li>
+      </button>
+
+    </ul>
+
   </div>
+</div>
 
 
 
 
 <div class="col-md-6 ms-5 mt-5 d-flex">
 
-    <div class="form-group">
-              <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Título do vídeo</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text"></div>
-              </div>
-              <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">Descricao do vídeo</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                  <div id="emailHelp" class="form-text">Faça uma breve descrição do vídeo</div>
-              </div>
-              <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">Link do vídeo</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                  <div id="emailHelp" class="form-text">Insira o link do vídeo</div>
-              </div>
-              <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">Lista de exercícios</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                  <div id="emailHelp" class="form-text">Se você deseja passar exercícios para os estudantes, insira aqui um link de um documento do Google Drive que esteja disponível no modo de leitura.</div>
-              </div>
-              <div class="form-group mb-5 mt-3">
-                  <label for="tipo">Tema</label>
-                  <select class="form-control" name="tipo" id="tipo">
-                      <option *ngFor='let tema of listaTemas'>{{tema.descricao}}</option>
-                      
-                  </select>
-                  <a class="btn btn-light me-2" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                  href="">Cadastrar novo Tema</a>
-                  <a class="btn btn-info me-2" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                  href="">Editar Tema</a>
-                  <a class="btn btn-danger me-2" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                  href="">Apagar Tema</a>
-                  
-              </div>
-              <button type="submit" class="btn btn-primary mt-5 mb-5">Adicionar</button>
-            </div>
-       </div>
-    <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Cadastro de Tema</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="form-group">
-              <label for="titulo">Título</label>
-              <input [(ngModel)]='tema.descricao' type="text" class="form-control" id="titulo" placeholder="título">
-          </div>
-          
-       
+  <div class="form-group">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Título do vídeo</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text"></div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Descricao do vídeo</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">Faça uma breve descrição do vídeo</div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Link do vídeo</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">Insira o link do vídeo</div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Lista de exercícios</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">Se você deseja passar exercícios para os estudantes, insira aqui um link de
+        um documento do Google Drive que esteja disponível no modo de leitura.</div>
+    </div>
+    <div class="form-group mb-5 mt-3">
+      <label for="tipo">
+        Tema
+        <a data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <i class="fa fa-cogs" aria-hidden="true"></i>
+        </a>
+        
+      </label>
+      <select class="form-control" name="tipo" id="tipo">
+        <option>Selecione um Tema</option>
+        <option *ngFor='let tema of listaTemas'>
+          {{tema.descricao}}
+        </option>
 
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-          <button type="button" (click)='cadastrar()' class="btn btn-success" data-bs-dismiss="modal">Salvar </button>
+      </select>
+      <a class="btn btn-light me-2" data-bs-toggle="modal" data-bs-target="#cadastrar" >Cadastrar novo
+        Tema</a>
+
+
+    </div>
+    <button type="submit" class="btn btn-primary mt-5 mb-5">Adicionar</button>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Editar tema</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <div class="row mt-5">
+              <div class="col-md-12">
+                  <h2 class="text-center">Todos os temas</h2>
+              </div>
+          </div>
+        
+          <div class="row mt-3 mb-5 d-flex justify-content-center">
+              <div class="col-md-6 d-flex justify-content-center">
+        
+                  <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">Descrição</th>
+                          <th scope="col" class="text-right">Modificações</th>
+                        </tr> 
+                      </thead>
+        
+                      <tbody>
+                        <tr *ngFor='let item of listaTemas'>
+                          <th>{{item.id}}</th>
+                          <td>{{item.descricao}}</td>
+                          <td class="d-flex justify-content-end">
+                            <button class="btn btn-info me-3"[routerLink]="['/tema-edit', item.id]" data-bs-dismiss="modal">Editar</button>
+                            <button class="btn btn-danger" [routerLink]="['/tema-delete', item.id]" data-bs-dismiss="modal">Apagar</button>
+                          </td>
+                        </tr>
+        
+                      </tbody>
+                    </table>
+              </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="cadastrar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cadastro de Tema</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="titulo">Título</label>
+          <input [(ngModel)]='tema.descricao' type="text" class="form-control" id="titulo" placeholder="título">
+        </div>
+
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" (click)='cadastrar()' class="btn btn-success" data-bs-dismiss="modal">Salvar </button>
+      </div>
+    </div>
+  </div>
+</div>

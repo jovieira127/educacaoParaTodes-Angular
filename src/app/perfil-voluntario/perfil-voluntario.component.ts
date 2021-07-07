@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Tema } from '../model/Tema';
-import { TemaService } from '../service/perfil-voluntario.service';
+import { TemaService } from '../service/tema.service';
+
 
 @Component({
   selector: 'app-perfil-voluntario',
@@ -16,7 +17,7 @@ export class PerfilVoluntarioComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private perfilService: TemaService
+    private temaService: TemaService
     ) { }
 
   ngOnInit() { 

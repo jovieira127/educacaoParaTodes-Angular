@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>
+                Apagar tema
+            </h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h4>Vc tem certeza que quer apagar esse tema? Todas as postagens relacionadas a ele serão apagadas</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h5>Tema: {{tema.descricao}}</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <button routerLink='/tema'>Não</button>
+            <button (click)='apagar()'>Sim</button>
+        </div>
+    </div>
+</div>
