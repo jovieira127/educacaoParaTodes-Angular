@@ -7,6 +7,7 @@ import { FeedComponent } from './feed/feed.component';
 import { LoginComponent } from './login/login.component';
 import { MenuLateralComponent } from './menu-lateral/menu-lateral.component';
 import { MenuSuperiorComponent } from './menu-superior/menu-superior.component';
+import { MeusConteudosComponent } from './meus-conteudos/meus-conteudos.component';
 import { PerfilAdicionarVideosComponent } from './perfil-adicionar-videos/perfil-adicionar-videos.component';
 import { PerfilVoluntarioComponent } from './perfil-voluntario/perfil-voluntario.component';
 import { RodapeComponent } from './rodape/rodape.component';
@@ -31,7 +32,8 @@ const routes: Routes = [
   {path: 'perfil-adicionar-videos', component: PerfilAdicionarVideosComponent},
   {path: 'perfil-voluntario', component: PerfilVoluntarioComponent},
   {path: 'tema-edit/:id', component: TemaEditComponent},
-  {path: 'tema-delete/:id', component: TemaDeleteComponent}
+  {path: 'tema-delete/:id', component: TemaDeleteComponent},
+  {path: 'meus-conteudos', component: MeusConteudosComponent},
 
 ];
 
