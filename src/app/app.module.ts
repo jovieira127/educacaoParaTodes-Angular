@@ -28,6 +28,8 @@ import { FeedComponent } from './feed/feed.component';
 import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
+import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 
 
 
@@ -46,7 +48,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     PerfilVoluntarioComponent,
     PerfilEstudanteComponent,
     FeedComponent,   
-    PerfilAdicionarVideosComponent, TemaEditComponent, TemaDeleteComponent, 
+    PerfilAdicionarVideosComponent, TemaEditComponent, TemaDeleteComponent, PostagemEditComponent, PostagemDeleteComponent, 
   ],
   imports: [
     BrowserModule,
