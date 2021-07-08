@@ -28,15 +28,12 @@ import { FeedComponent } from './feed/feed.component';
 import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
-<<<<<<< HEAD
 import { MeusConteudosComponent } from './meus-conteudos/meus-conteudos.component';
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
-=======
-import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
-import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
+import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
 
->>>>>>> origin/delete-put-postagem
+
 
 
 @NgModule({
@@ -54,12 +51,9 @@ import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delet
     PerfilVoluntarioComponent,
     PerfilEstudanteComponent,
     FeedComponent,   
-<<<<<<< HEAD
     PerfilAdicionarVideosComponent, TemaEditComponent, TemaDeleteComponent, MeusConteudosComponent, 
-     PostagemEditComponent, PostagemDeleteComponent, 
-=======
-    PerfilAdicionarVideosComponent, TemaEditComponent, TemaDeleteComponent, PostagemEditComponent, PostagemDeleteComponent, 
->>>>>>> origin/delete-put-postagem
+    PostagemEditComponent, PostagemDeleteComponent, UsuarioEditComponent, 
+   
   ],
   imports: [
     BrowserModule,

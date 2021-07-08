@@ -1,4 +1,37 @@
-<div class="collapse" id="navbarToggleExternalContent">
+<!--Menu-->
+<div class="col-3 tamanho-menu">
+
+  <img src="{{foto}}" alt="Imagem do usuario" width="50px" height="50px" class="rounded-circle">
+
+  <div class="modal-body">
+    <ul class="list-group list-group-flush">
+      
+      <button class="btn btn-outline-light" type="submit">
+        <li class="list-group-item bg-primary borda-botao cor-letra">Feed</li>
+      </button>
+
+      <button class="btn btn-outline-light" type="submit">
+        <li class="list-group-item bg-primary borda-botao cor-letra" [routerLink]="['/user-edit', id]">Editar perfil</li>
+      </button>
+
+      <button class="btn btn-outline-light" type="submit">
+        <li class="list-group-item bg-primary borda-botao cor-letra">Ranking</li>
+      </button>
+
+      <button class="btn btn-outline-light" type="submit">
+        <li class="list-group-item bg-primary borda-botao cor-letra">Tutorial</li>
+      </button>
+
+    </ul>
+  </div>
+</div>
+<!--/Menu-->
+
+
+
+
+
+<!-- <div class="collapse" id="navbarToggleExternalContent">
   <div class="bg-dark p-4">
     <h5 class="text-white h4">Collapsed content</h5>
     <span class="text-muted">Toggleable via the navbar brand.</span>
@@ -42,3 +75,4 @@
     </div>
   </div>
 </div>
+ -->
