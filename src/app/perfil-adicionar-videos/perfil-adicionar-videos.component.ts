@@ -17,12 +17,12 @@ import { TemaService } from '../service/tema.service';
 export class PerfilAdicionarVideosComponent implements OnInit {
 
   postagem: Postagem = new Postagem()
-  listaPostagens: Postagem[] 
+  listaPostagens: Postagem[]
 
   tema: Tema = new Tema()
   listaTemas: Tema[]
-  idTema:number
- 
+  idTema: number
+
   user: Usuario = new Usuario()
   idUser = environment.id
 
@@ -39,11 +39,12 @@ export class PerfilAdicionarVideosComponent implements OnInit {
     }
     this.temaService.refreshToken()
     this.findAllTemas()
+    /* comentario: aqui esta duplicado linha 41 */
     this.getAllTemas()
   }
 
-  findByIdTema(){
-    this.temaService.getByIdTema(this.idTema).subscribe((resposta: Tema)=>{
+  findByIdTema() {
+    this.temaService.getByIdTema(this.idTema).subscribe((resposta: Tema) => {
       this.tema = resposta
     })
   }
@@ -54,13 +55,14 @@ export class PerfilAdicionarVideosComponent implements OnInit {
     })
   }
 
-  getAllTemas(){
-    this.temaService.getAllTema().subscribe((resposta:Tema[]) => {
-      this.listaTemas= resposta
+  /* comentario: aqui esta duplicado linha 51 */
+  getAllTemas() {
+    this.temaService.getAllTema().subscribe((resposta: Tema[]) => {
+      this.listaTemas = resposta
     })
   }
 
-  getAllPostagens(){
+  getAllPostagens() {
     this.postagemService.getAllPostagens().subscribe((resposta: Postagem[]) => {
       this.listaPostagens = resposta
 
@@ -68,33 +70,36 @@ export class PerfilAdicionarVideosComponent implements OnInit {
 
   }
 
-  findByIdUser(){
+  findByIdUser() {
     this.authService.getByIdUser(this.idUser).subscribe((resposta: Usuario) => {
       this.user = resposta
     })
   }
 
-  
+
   cadastrar() {
     this.temaService.postTema(this.tema).subscribe((resp: Tema) => {
       this.tema = resp
       alert('tema cadastrado com sucesso')
-     this.findAllTemas()
+      this.findAllTemas()
       this.tema = new Tema()
     })
   }
 
-  publicar(){
+  publicar() {
     this.tema.id = this.idTema
     this.postagem.tema = this.tema
- 
+
     this.user.id = this.idUser
     this.postagem.usuario = this.user
- 
-    this.postagemService.postPostagem(this.postagem).subscribe((resposta: Postagem)=>{
+    
+
+    this.postagemService.postPostagem(this.postagem).subscribe((resposta: Postagem) => {
       this.postagem = resposta
+      this.router.navigate(['/meus-conteudos'])
       alert('Postagem realizada com sucesso!')
       this.postagem = new Postagem()
+      this.getAllPostagens()
     })
   }
 

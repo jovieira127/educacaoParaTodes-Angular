@@ -33,7 +33,7 @@ const routes: Routes = [
   {path: 'perfil-voluntario', component: PerfilVoluntarioComponent},
   {path: 'tema-edit/:id', component: TemaEditComponent},
   {path: 'tema-delete/:id', component: TemaDeleteComponent},
-  {path: 'meus-conteudos', component: MeusConteudosComponent},
+  {path: 'meus-conteudos/:id', component: MeusConteudosComponent},
 
 ];
 

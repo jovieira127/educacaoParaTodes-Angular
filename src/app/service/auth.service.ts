@@ -16,13 +16,13 @@ export class AuthService {
     private http: HttpClient
   ) { }
 
-  token = {
+  /* comentario: não precisa desses aqui no auth token = {
     headers: new HttpHeaders().set('Authorization', environment.token)
   }
 
   refreshToken(){
     this.token = { headers: new HttpHeaders().set('Authorization',environment.token)}
-  }
+  } */
 
   entrar(usuarioLogin: UsuarioLogin): Observable<UsuarioLogin>{
     return this.http.post<UsuarioLogin>('http://localhost:8080/usuarios/login', usuarioLogin)

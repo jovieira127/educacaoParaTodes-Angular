@@ -37,26 +37,31 @@
 
 
 <div class="col-md-6 ms-5 mt-5 d-flex">
-
+<!-- comentario: todos os inputs estavam com type="email" -->
   <div class="form-group">
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Título do vídeo</label>
-      <input [(ngModel)]='postagem.titulo' type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <input [(ngModel)]='postagem.titulo' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
       <div id="emailHelp" class="form-text"></div>
     </div>
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Descricao do vídeo</label>
-      <input   [(ngModel)]='postagem.texto' type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <input   [(ngModel)]='postagem.texto' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
       <div id="emailHelp" class="form-text">Faça uma breve descrição do vídeo</div>
     </div>
     <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">aqui é cambalacho para usar o descricaoPostagem</label>
+      <input   [(ngModel)]='postagem.descricaoPostagem' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">aqui é cambalacho para usar o descricaoPostagem</div>
+    </div>
+    <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Link do vídeo</label>
-      <input  [(ngModel)]='postagem.linkVideo' type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <input  [(ngModel)]='postagem.linkVideo' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
       <div id="emailHelp" class="form-text">Insira o link do vídeo</div>
     </div>
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Lista de exercícios</label>
-      <input  [(ngModel)]='postagem.linkExercicio' type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <input  [(ngModel)]='postagem.linkExercicio' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
       <div id="emailHelp" class="form-text">Se você deseja passar exercícios para os estudantes, insira aqui um link de
         um documento do Google Drive que esteja disponível no modo de leitura.</div>
     </div>
@@ -75,7 +80,7 @@
         </option>
       </select> -->
 
-      <select class="form-control" name="tema" id="tema"[(ngModel)]='idTema'(change)=' findByIdTema()'>
+      <select [(ngModel)]='idTema' class="form-control" name="tema" id="tema"(change)='findByIdTema()'>
         <option *ngFor='let tema of listaTemas' value="{{tema.id}}">
           {{tema.descricao}}
           </option>
@@ -86,7 +91,12 @@
 
 
     </div>
-    <button type="submit" class="btn btn-primary mt-5 mb-5" (click)='publicar()' routerLink = '/meus-conteudos'>Adicionar</button>
+    <button type="submit" class="btn btn-primary mt-5 mb-5" (click)='publicar()' >Adicionar</button>
+    <button  class="btn btn-danger mt-5 mb-5" [routerLink]="['/meus-conteudos', user.id]">
+      meus-conteudos
+    </button>
+<!--  comentario routerLink = '/meus-conteudos' deve estar no final de publicar() ts -->
+
   </div>
 </div>
 
