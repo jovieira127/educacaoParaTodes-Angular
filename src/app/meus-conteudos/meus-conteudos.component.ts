@@ -17,6 +17,8 @@ export class MeusConteudosComponent implements OnInit {
 
   postagem: Postagem = new Postagem()
   listaPostagens: Postagem[]
+  idPost: number
+
 
   tema: Tema = new Tema()
   listaTemas: Tema[]
@@ -31,7 +33,8 @@ export class MeusConteudosComponent implements OnInit {
     private temaService: TemaService,
     private postagemService: PostagemService,
     private authService: AuthService
-  ) { }
+    
+    ) { }
 
   ngOnInit() {
     if (environment.token == '') {
@@ -89,7 +92,23 @@ export class MeusConteudosComponent implements OnInit {
     })
   }
 
+  atualizar(){
+    this.tema.id = this.idTema
+    this.postagem.tema = this.tema
+    
+    this.postagemService.putPostagem(this.postagem).subscribe((resp: Postagem)=>{
+      this.postagem = resp
+      alert('Postagem atualizada com sucesso')
+      this.router.navigate(['/meus-conteudos'])
+    })
+  }
 
+apagar(){
+  this.postagemService.deletePostagem(this.idPost).subscribe(()=>{
+    alert('Postagem apagada com sucesso')
+    this.router.navigate(['/login'])
+  })
+}
 
 
 }
