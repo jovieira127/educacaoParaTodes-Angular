@@ -28,6 +28,7 @@ import { FeedComponent } from './feed/feed.component';
 import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { MeusConteudosComponent } from './meus-conteudos/meus-conteudos.component';
 
 
 
@@ -46,7 +47,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     PerfilVoluntarioComponent,
     PerfilEstudanteComponent,
     FeedComponent,   
-    PerfilAdicionarVideosComponent, TemaEditComponent, TemaDeleteComponent, 
+    PerfilAdicionarVideosComponent, TemaEditComponent, TemaDeleteComponent, MeusConteudosComponent, 
   ],
   imports: [
     BrowserModule,

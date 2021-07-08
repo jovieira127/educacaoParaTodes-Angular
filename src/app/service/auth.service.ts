@@ -23,12 +23,30 @@ export class AuthService {
   refreshToken(){
     this.token = { headers: new HttpHeaders().set('Authorization',environment.token)}
   }
-entrar(usuarioLogin: UsuarioLogin): Observable<UsuarioLogin>{
-  return this.http.post<UsuarioLogin>('http://localhost:8080/usuarios/login', usuarioLogin)
-}
 
-cadastrar(usuario: Usuario): Observable<Usuario>{
-  return this.http.post<Usuario>('http://localhost:8080/usuarios', usuario)
-}
+  entrar(usuarioLogin: UsuarioLogin): Observable<UsuarioLogin>{
+    return this.http.post<UsuarioLogin>('http://localhost:8080/usuarios/login', usuarioLogin)
+  }
+
+  cadastrar(usuario: Usuario): Observable<Usuario>{
+    return this.http.post<Usuario>('http://localhost:8080/usuarios', usuario)
+  }
+
+  getByIdUser(id: number): Observable<Usuario>{
+    return this.http.get<Usuario>(`http://localhost:8080/usuarios/${id}` )
+
+  }
+
+  logado(){
+    let ok: boolean = false
+
+    if (environment.token != ''){
+      ok = true
+    }
+
+    return ok
+  }
+
+  
 
 }

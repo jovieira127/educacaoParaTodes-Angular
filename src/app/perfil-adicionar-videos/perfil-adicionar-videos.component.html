@@ -25,7 +25,7 @@
       </button>
 
       <button class="btn btn-outline-light" type="submit">
-        <li class="list-group-item bg-primary borda-botao cor-letra">Meus conteúdos</li>
+        <li class="list-group-item bg-primary borda-botao cor-letra" routerLink = '/meus-conteudos'>Meus conteúdos</li>
       </button>
 
     </ul>
@@ -75,7 +75,7 @@
         </option>
       </select> -->
 
-      <select class="form-control" name="tema" id="tema"[(ngModel)]='idTema'(change)=' findByIdtema()'>
+      <select class="form-control" name="tema" id="tema"[(ngModel)]='idTema'(change)=' findByIdTema()'>
         <option *ngFor='let tema of listaTemas' value="{{tema.id}}">
           {{tema.descricao}}
           </option>
@@ -86,9 +86,10 @@
 
 
     </div>
-    <button type="submit" class="btn btn-primary mt-5 mb-5" (click)='publicar()'>Adicionar</button>
+    <button type="submit" class="btn btn-primary mt-5 mb-5" (click)='publicar()' routerLink = '/meus-conteudos'>Adicionar</button>
   </div>
 </div>
+
 <!-- Modal -->
 <div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
