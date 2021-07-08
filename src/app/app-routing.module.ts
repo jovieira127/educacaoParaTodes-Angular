@@ -35,7 +35,10 @@ const routes: Routes = [
   {path: 'perfil-voluntario', component: PerfilVoluntarioComponent},
   {path: 'tema-edit/:id', component: TemaEditComponent},
   {path: 'tema-delete/:id', component: TemaDeleteComponent},
+<<<<<<< HEAD
   {path: 'meus-conteudos', component: MeusConteudosComponent},
+=======
+>>>>>>> origin/delete-put-postagem
   {path: 'postagem-edit/:id', component: PostagemEditComponent},
   {path: 'postagem-delete/:id', component: PostagemDeleteComponent}
 
