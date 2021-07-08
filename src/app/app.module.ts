@@ -29,7 +29,8 @@ import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { MeusConteudosComponent } from './meus-conteudos/meus-conteudos.component';
-
+import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
+import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 
 
 @NgModule({
@@ -48,6 +49,7 @@ import { MeusConteudosComponent } from './meus-conteudos/meus-conteudos.componen
     PerfilEstudanteComponent,
     FeedComponent,   
     PerfilAdicionarVideosComponent, TemaEditComponent, TemaDeleteComponent, MeusConteudosComponent, 
+     PostagemEditComponent, PostagemDeleteComponent, 
   ],
   imports: [
     BrowserModule,
