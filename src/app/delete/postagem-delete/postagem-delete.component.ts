@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Postagem } from 'src/app/model/Postagem';
 import { Tema } from 'src/app/model/Tema';
-import { TemaService } from 'src/app/service/tema.service';
+import { PostagemService } from 'src/app/service/postagem.service';
 import { environment } from 'src/environments/environment.prod';
 
 @Component({
@@ -12,14 +12,16 @@ import { environment } from 'src/environments/environment.prod';
 })
 export class PostagemDeleteComponent implements OnInit {
 
+  tema: Tema = new Tema()
   postagem: Postagem = new Postagem()
   idPost: number
 
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    /* private postagemService: PostagemService, */
-    private temaService: TemaService
+     private postagemService: PostagemService, 
+   
+
   ) { }
 
   ngOnInit() {

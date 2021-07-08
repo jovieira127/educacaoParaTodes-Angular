@@ -21,8 +21,9 @@ export class MeusConteudosComponent implements OnInit {
   tema: Tema = new Tema()
   listaTemas: Tema[]
   idTema: number
+  /*  linkVideo: linkVideo */
 
-  user: Usuario = new Usuario()
+  usuario: Usuario = new Usuario()
   idUser = environment.id
 
   constructor(
@@ -37,10 +38,11 @@ export class MeusConteudosComponent implements OnInit {
       this.router.navigate(['/login'])
     }
     this.temaService.refreshToken()
-    
-    this.getAllPostagens()
+
+    this.findByIdUser()
     this.getAllTemas()
   }
+
 
   getAllPostagens() {
     this.postagemService.getAllPostagens().subscribe((resposta: Postagem[]) => {
@@ -50,6 +52,14 @@ export class MeusConteudosComponent implements OnInit {
 
   }
 
+  findByIdTema() {
+    this.temaService.getByIdTema(this.idTema).subscribe((resposta: Tema) => {
+      this.tema = resposta
+    })
+  }
+
+
+
   getAllTemas() {
     this.temaService.getAllTema().subscribe((resposta: Tema[]) => {
       this.listaTemas = resposta
@@ -58,7 +68,29 @@ export class MeusConteudosComponent implements OnInit {
 
   findByIdUser() {
     this.authService.getByIdUser(this.idUser).subscribe((resposta: Usuario) => {
-      this.user = resposta
+      this.usuario = resposta
     })
   }
+  publicar() {
+    this.tema.id = this.idTema
+    this.postagem.tema = this.tema
+
+    this.usuario.id = this.idUser
+    this.postagem.usuario = this.usuario
+
+
+
+    this.postagemService.postPostagem(this.postagem).subscribe((resposta: Postagem) => {
+      this.postagem = resposta
+      this.router.navigate(['/meus-conteudos'])
+      alert('Postagem realizada com sucesso!')
+      this.postagem = new Postagem()
+      this.findByIdUser()
+    })
+  }
+
+
+
+
 }
+
