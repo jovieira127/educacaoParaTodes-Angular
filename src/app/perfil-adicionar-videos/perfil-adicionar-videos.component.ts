@@ -27,6 +27,8 @@ export class PerfilAdicionarVideosComponent implements OnInit {
   user: Usuario = new Usuario()
   idUser = environment.id
 
+ 
+
   constructor(
     private router: Router,
     private temaService: TemaService,
