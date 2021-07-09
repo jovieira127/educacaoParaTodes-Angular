@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment.prod';
 import { Postagem } from '../model/Postagem';
 import { Tema } from '../model/Tema';
 import { Usuario } from '../model/Usuario';
+import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
 import { PostagemService } from '../service/postagem.service';
 import { TemaService } from '../service/tema.service';
@@ -30,7 +31,8 @@ export class PerfilAdicionarVideosComponent implements OnInit {
     private router: Router,
     private temaService: TemaService,
     private postagemService: PostagemService,
-    private authService: AuthService
+    private authService: AuthService,
+    private alertas: AlertasService
   ) { }
 
   ngOnInit() {
@@ -80,7 +82,7 @@ export class PerfilAdicionarVideosComponent implements OnInit {
   cadastrar() {
     this.temaService.postTema(this.tema).subscribe((resp: Tema) => {
       this.tema = resp
-      alert('tema cadastrado com sucesso')
+      this.alertas.showAlertSuccess('tema cadastrado com sucesso')
       this.findAllTemas()
       this.tema = new Tema()
     })
@@ -97,7 +99,7 @@ export class PerfilAdicionarVideosComponent implements OnInit {
     this.postagemService.postPostagem(this.postagem).subscribe((resposta: Postagem) => {
       this.postagem = resposta
       this.router.navigate(['/meus-conteudos'])
-      alert('Postagem realizada com sucesso!')
+      this.alertas.showAlertSuccess('Postagem realizada com sucesso!')
       this.postagem = new Postagem()
       this.getAllPostagens()
     })

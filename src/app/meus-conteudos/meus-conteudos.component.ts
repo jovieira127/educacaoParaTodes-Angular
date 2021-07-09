@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment.prod';
 import { Postagem } from '../model/Postagem';
 import { Tema } from '../model/Tema';
 import { Usuario } from '../model/Usuario';
+import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
 import { PostagemService } from '../service/postagem.service';
 import { TemaService } from '../service/tema.service';
@@ -32,7 +33,8 @@ export class MeusConteudosComponent implements OnInit {
     private router: Router,
     private temaService: TemaService,
     private postagemService: PostagemService,
-    private authService: AuthService
+    private authService: AuthService,
+    private alerta: AlertasService
     
     ) { }
 
@@ -86,7 +88,7 @@ export class MeusConteudosComponent implements OnInit {
     this.postagemService.postPostagem(this.postagem).subscribe((resposta: Postagem) => {
       this.postagem = resposta
       this.router.navigate(['/meus-conteudos'])
-      alert('Postagem realizada com sucesso!')
+      this.alerta.showAlertSuccess('Postagem realizada com sucesso!')
       this.postagem = new Postagem()
       this.findByIdUser()
     })
@@ -98,14 +100,14 @@ export class MeusConteudosComponent implements OnInit {
     
     this.postagemService.putPostagem(this.postagem).subscribe((resp: Postagem)=>{
       this.postagem = resp
-      alert('Postagem atualizada com sucesso')
+      this.alerta.showAlertSuccess('Postagem atualizada com sucesso')
       this.router.navigate(['/meus-conteudos'])
     })
   }
 
 apagar(){
   this.postagemService.deletePostagem(this.idPost).subscribe(()=>{
-    alert('Postagem apagada com sucesso')
+    this.alerta.showAlertSuccess('Postagem apagada com sucesso')
     this.router.navigate(['/login'])
   })
 }

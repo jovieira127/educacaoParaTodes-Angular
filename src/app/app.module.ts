@@ -10,7 +10,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
+
 import { PerfilAdicionarVideosComponent } from './perfil-adicionar-videos/perfil-adicionar-videos.component';
+
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -31,6 +33,9 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { MeusConteudosComponent } from './meus-conteudos/meus-conteudos.component';
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
+import { AlertasComponent } from './alertas/alertas.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
+
 
 
 @NgModule({
@@ -49,7 +54,7 @@ import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delet
     PerfilEstudanteComponent,
     FeedComponent,   
     PerfilAdicionarVideosComponent, TemaEditComponent, TemaDeleteComponent, MeusConteudosComponent, 
-     PostagemEditComponent, PostagemDeleteComponent, 
+     PostagemEditComponent, PostagemDeleteComponent, AlertasComponent, 
   ],
   imports: [
     BrowserModule,
@@ -63,6 +68,8 @@ import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delet
     MatDividerModule,
     HttpClientModule,
     FormsModule,
+    ModalModule.forRoot()
+    
     
   ],
   providers: [{
