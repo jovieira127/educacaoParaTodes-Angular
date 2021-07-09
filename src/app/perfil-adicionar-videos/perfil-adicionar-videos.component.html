@@ -1,105 +1,81 @@
 <app-menu-superior></app-menu-superior>
-<app-menu-perfil></app-menu-perfil>
-<!-- <div class="col-3 tamanho-menu">
 
 
-  <img src="" alt="Foto Perfil" width="80px" height="80px" class="rounded-circle margen-fotos margen-fotos">
-
-  <div class="modal-body">
-    <ul class="list-group list-group-flush">
-
-      <button class="btn btn-outline-light" type="submit">
-        <li class="list-group-item bg-primary borda-botao cor-letra">Tutorial</li>
-      </button>
-
-      <button class="btn btn-outline-light" type="submit">
-        <li class="list-group-item bg-primary borda-botao cor-letra">Editar perfil</li>
-      </button>
-
-      <button class="btn btn-outline-light" type="submit">
-
-        <li class="list-group-item bg-primary borda-botao cor-letra"> <a class="text-white"
-            routerLink='/perfil-adicionar-videos'>Adicionar conteudo </a>
-        </li>
-
-
-      </button>
-
-      <button class="btn btn-outline-light" type="submit">
-        <li class="list-group-item bg-primary borda-botao cor-letra" routerLink = '/meus-conteudos'>Meus conteúdos</li>
-      </button>
-
-    </ul>
-
-  </div>
-</div> -->
-
-
-
-
-<div class="col-md-6 ms-5 mt-5 d-flex">
-<!-- comentario: todos os inputs estavam com type="email" -->
-  <div class="form-group">
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Título do vídeo</label>
-      <input [(ngModel)]='postagem.titulo' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-      <div id="emailHelp" class="form-text"></div>
+<div class="container-fluid">
+  <div class="row">
+    
+    <div class="col-md-4">
+      <app-menu-perfil></app-menu-perfil>
     </div>
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Descricao do vídeo</label>
-      <input   [(ngModel)]='postagem.texto' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-      <div id="emailHelp" class="form-text">Faça uma breve descrição do vídeo</div>
-    </div>
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">aqui é cambalacho para usar o descricaoPostagem</label>
-      <input   [(ngModel)]='postagem.descricaoPostagem' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-      <div id="emailHelp" class="form-text">aqui é cambalacho para usar o descricaoPostagem</div>
-    </div>
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Link do vídeo</label>
-      <input  [(ngModel)]='postagem.linkVideo' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-      <div id="emailHelp" class="form-text">Insira o link do vídeo</div>
-    </div>
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Lista de exercícios</label>
-      <input  [(ngModel)]='postagem.linkExercicio' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-      <div id="emailHelp" class="form-text">Se você deseja passar exercícios para os estudantes, insira aqui um link de
-        um documento do Google Drive que esteja disponível no modo de leitura.</div>
-    </div>
-    <div class="form-group mb-5 mt-3">
-      <label for="tipo">
-        Tema
-        <a data-bs-toggle="modal" data-bs-target="#exampleModal">
-          <i class="fa fa-cogs" aria-hidden="true"></i>
-        </a>
-        
-      </label>
-      <!-- <select class="form-control" name="tipo" id="tipo">
-        <option>Selecione um Tema</option>
-        <option *ngFor='let tema of listaTemas'>
-          {{tema.descricao}}
-        </option>
-      </select> -->
+  
+    <div class="col-md-6 mt-5 d-flex">
+     
+        <div class="form-group margin">
+          <div class="mb-3">
+            <h3 class ="text-center fw-2 mt-3 mb-4">Poste seu Conteúdo! </h3>
+            <label for="exampleInputEmail1" class="form-label mt-4">Título do vídeo</label>
+            <input [(ngModel)]='postagem.titulo' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text"></div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Descricao do vídeo</label>
+            <input   [(ngModel)]='postagem.texto' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">Faça uma breve descrição do vídeo</div>
+          </div>
+          
+         <!--  TEMA -->
 
-      <select [(ngModel)]='idTema' class="form-control" name="tema" id="tema"(change)='findByIdTema()'>
-        <option *ngFor='let tema of listaTemas' value="{{tema.id}}">
-          {{tema.descricao}}
-          </option>
-    </select>
+          <div class="form-group mb-5 mt-3">
+            <label for="tipo">
+              Tema
+              <a data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <i class="fa fa-pencil" aria-hidden="true"></i>
+              </a>              
+            </label>  
 
-      <a class="btn btn-light me-2" data-bs-toggle="modal" data-bs-target="#cadastrar" >Cadastrar novo
-        Tema</a>
+            <select [(ngModel)]='idTema' class="form-control" name="tema" id="tema"(change)='findByIdTema()'>
+              <option value="selecaoTema">Selecione o tema</option>
+              <option *ngFor='let tema of listaTemas' value="{{tema.id}}">
+                {{tema.descricao}}
+              </option>
 
+          </select>
+            <a href="" data-bs-toggle="modal" data-bs-target="#cadastrar" >Cadastrar novo tema</a>
 
-    </div>
-    <button type="submit" class="btn btn-primary mt-5 mb-5" (click)='publicar()' >Adicionar</button>
-    <button  class="btn btn-danger mt-5 mb-5" [routerLink]="['/meus-conteudos', user.id]">
-      meus-conteudos
-    </button>
-<!--  comentario routerLink = '/meus-conteudos' deve estar no final de publicar() ts -->
+            <!-- <a class="btn btn-light me-2" data-bs-toggle="modal" data-bs-target="#cadastrar" >Cadastrar novo
+              Tema</a>  -->   
+          </div>
 
+            <!-- TEMA -->
+
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">aqui é cambalacho para usar o descricaoPostagem</label>
+            <input   [(ngModel)]='postagem.descricaoPostagem' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">aqui é cambalacho para usar o descricaoPostagem</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Link do vídeo</label>
+            <input  [(ngModel)]='postagem.linkVideo' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">Insira o link do vídeo</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Lista de exercícios</label>
+            <input  [(ngModel)]='postagem.linkExercicio' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">Se você deseja passar exercícios para os estudantes, insira aqui um link de
+              um documento do Google Drive que esteja disponível no modo de leitura.</div>
+          </div>
+          
+          <button type="submit" class="btn btn-primary mt-5 mb-5 d-flex justify-content-center " (click)='publicar()' >Adicionar Conteúdo</button>
+         
+      <!--  comentario routerLink = '/meus-conteudos' deve estar no final de publicar() ts -->
+      
+        </div>
+      </div>
   </div>
 </div>
+
+
+
 
 <!-- Modal -->
 <div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -124,8 +100,8 @@
                       <thead>
                         <tr>
                           <th scope="col">#</th>
-                          <th scope="col">Descrição</th>
-                          <th scope="col" class="text-right">Modificações</th>
+                          <th scope="col">Temas</th>
+                          
                         </tr> 
                       </thead>
         
@@ -134,8 +110,9 @@
                           <th>{{item.id}}</th>
                           <td>{{item.descricao}}</td>
                           <td class="d-flex justify-content-end">
-                            <button class="btn btn-info me-3"[routerLink]="['/tema-edit', item.id]" data-bs-dismiss="modal">Editar</button>
-                            <button class="btn btn-danger" [routerLink]="['/tema-delete', item.id]" data-bs-dismiss="modal">Apagar</button>
+                            <i class="fa fa-pencil batatinha"  aria-hidden="true" [routerLink]="['/tema-edit', item.id]" data-bs-dismiss="modal"></i>
+                            <i class="fa fa-trash batatinha" aria-hidden="true" [routerLink]="['/tema-delete', item.id]" data-bs-dismiss="modal"></i>
+                            
                           </td>
                         </tr>
         
@@ -174,3 +151,53 @@
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
+ <!-- <select class="form-control" name="tipo" id="tipo">
+              <option>Selecione um Tema</option>
+              <option *ngFor='let tema of listaTemas'>
+                {{tema.descricao}}
+              </option>
+            </select> -->
+
+
+
+
+<!-- <div class="col-3 tamanho-menu">
+
+
+  <img src="" alt="Foto Perfil" width="80px" height="80px" class="rounded-circle margen-fotos margen-fotos">
+
+  <div class="modal-body">
+    <ul class="list-group list-group-flush">
+
+      <button class="btn btn-outline-light" type="submit">
+        <li class="list-group-item bg-primary borda-botao cor-letra">Tutorial</li>
+      </button>
+
+      <button class="btn btn-outline-light" type="submit">
+        <li class="list-group-item bg-primary borda-botao cor-letra">Editar perfil</li>
+      </button>
+
+      <button class="btn btn-outline-light" type="submit">
+
+        <li class="list-group-item bg-primary borda-botao cor-letra"> <a class="text-white"
+            routerLink='/perfil-adicionar-videos'>Adicionar conteudo </a>
+        </li>
+
+
+      </button>
+
+      <button class="btn btn-outline-light" type="submit">
+        <li class="list-group-item bg-primary borda-botao cor-letra" routerLink = '/meus-conteudos'>Meus conteúdos</li>
+      </button>
+
+    </ul>
+
+  </div>
+</div> -->

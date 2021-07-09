@@ -20,3 +20,24 @@
     margin-left:30px;
     height: 400px;
 }
+
+.margin{
+    border: solid 0.2rem;
+    border-radius: 20px;
+    border-color: rgb(20, 233, 162);
+    padding: 20px 20px 20px 20px;
+}
+
+button{
+    border-radius: 20px;
+    padding: 10px;
+    margin-left: 220px;
+    
+}
+
+.batatinha{
+width: 30px;
+height: 30px;
+/* border-top: solid black 0.1rem; */
+}
+
