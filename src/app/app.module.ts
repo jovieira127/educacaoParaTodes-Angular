@@ -41,6 +41,8 @@ import { MenuPerfilComponent } from './menu-perfil/menu-perfil.component';
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,7 +60,9 @@ import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component
     FeedComponent,   
     PerfilAdicionarVideosComponent, TemaEditComponent, TemaDeleteComponent, MeusConteudosComponent, 
     AlertasComponent, 
-    PostagemEditComponent, PostagemDeleteComponent, MenuPerfilComponent, UsuarioEditComponent, 
+    MenuPerfilComponent, UsuarioEditComponent, 
+    PostagemEditComponent, PostagemDeleteComponent,
+   
   ],
   imports: [
     BrowserModule,
