@@ -37,6 +37,8 @@ import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delet
 import { AlertasComponent } from './alertas/alertas.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 
+import { MenuPerfilComponent } from './menu-perfil/menu-perfil.component';
+import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
 
 
 @NgModule({
@@ -55,7 +57,8 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     PerfilEstudanteComponent,
     FeedComponent,   
     PerfilAdicionarVideosComponent, TemaEditComponent, TemaDeleteComponent, MeusConteudosComponent, 
-     PostagemEditComponent, PostagemDeleteComponent, AlertasComponent, 
+    AlertasComponent, 
+    PostagemEditComponent, PostagemDeleteComponent, MenuPerfilComponent, UsuarioEditComponent, 
   ],
   imports: [
     BrowserModule,
