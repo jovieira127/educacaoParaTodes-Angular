@@ -31,6 +31,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { MeusConteudosComponent } from './meus-conteudos/meus-conteudos.component';
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
+import { MenuPerfilComponent } from './menu-perfil/menu-perfil.component';
 
 
 @NgModule({
@@ -49,7 +50,7 @@ import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delet
     PerfilEstudanteComponent,
     FeedComponent,   
     PerfilAdicionarVideosComponent, TemaEditComponent, TemaDeleteComponent, MeusConteudosComponent, 
-     PostagemEditComponent, PostagemDeleteComponent, 
+     PostagemEditComponent, PostagemDeleteComponent, MenuPerfilComponent, 
   ],
   imports: [
     BrowserModule,

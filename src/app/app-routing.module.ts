@@ -11,6 +11,7 @@ import { MenuLateralComponent } from './menu-lateral/menu-lateral.component';
 import { MenuSuperiorComponent } from './menu-superior/menu-superior.component';
 import { MeusConteudosComponent } from './meus-conteudos/meus-conteudos.component';
 import { PerfilAdicionarVideosComponent } from './perfil-adicionar-videos/perfil-adicionar-videos.component';
+import { PerfilEstudanteComponent } from './perfil-estudante/perfil-estudante.component';
 import { PerfilVoluntarioComponent } from './perfil-voluntario/perfil-voluntario.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { SaibaMaisComponent } from './saiba-mais/saiba-mais.component';
@@ -37,7 +38,8 @@ const routes: Routes = [
   {path: 'tema-delete/:id', component: TemaDeleteComponent},
   {path: 'meus-conteudos', component: MeusConteudosComponent},
   {path: 'postagem-edit/:id', component: PostagemEditComponent},
-  {path: 'postagem-delete/:id', component: PostagemDeleteComponent}
+  {path: 'postagem-delete/:id', component: PostagemDeleteComponent},
+  {path: 'perfil-estudante', component: PerfilEstudanteComponent}
 
 ];
 
