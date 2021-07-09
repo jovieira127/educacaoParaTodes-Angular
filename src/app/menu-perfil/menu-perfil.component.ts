@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-menu-perfil',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuPerfilComponent implements OnInit {
 
-  constructor() { }
+  nome = environment.nome
+  foto = environment.foto
+  id = environment.id
 
-  ngOnInit(): void {
+  constructor(
+    private router: Router
+  ) { }
+
+  ngOnInit(){
   }
 
 }

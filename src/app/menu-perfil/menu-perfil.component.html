@@ -1,5 +1,9 @@
-<div class="col-3 tamanho-menu">
-    <img src="" alt="Foto Perfil" width="80px" height="80px" class="rounded-circle margen-fotos margen-fotos">
+
+
+<div class="col tamanho-menu">
+  <div class="col">
+    <img src="{{foto}}" alt="Foto Perfil" width="80px" height="80px" class="rounded-circle margen-fotos margen-fotos">
+  </div>
 
     <div class="modal-body">
       <ul class="list-group list-group-flush">
@@ -19,7 +23,7 @@
           <li class="list-group-item bg-primary borda-botao cor-letra" routerLink = '/meus-conteudos'>Meus conteúdos</li>
         </button>
 
-        <button class="btn btn-outline-light" type="submit">
+        <button [routerLink]="['/usuario-edit', id]" class="btn btn-outline-light" type="submit">
             <li class="list-group-item bg-primary borda-botao cor-letra">Editar perfil</li>
           </button>
 

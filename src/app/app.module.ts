@@ -32,6 +32,7 @@ import { MeusConteudosComponent } from './meus-conteudos/meus-conteudos.componen
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 import { MenuPerfilComponent } from './menu-perfil/menu-perfil.component';
+import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
 
 
 @NgModule({
@@ -50,7 +51,7 @@ import { MenuPerfilComponent } from './menu-perfil/menu-perfil.component';
     PerfilEstudanteComponent,
     FeedComponent,   
     PerfilAdicionarVideosComponent, TemaEditComponent, TemaDeleteComponent, MeusConteudosComponent, 
-     PostagemEditComponent, PostagemDeleteComponent, MenuPerfilComponent, 
+     PostagemEditComponent, PostagemDeleteComponent, MenuPerfilComponent, UsuarioEditComponent, 
   ],
   imports: [
     BrowserModule,
