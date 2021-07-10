@@ -41,3 +41,7 @@ height: 30px;
 /* border-top: solid black 0.1rem; */
 }
 
+.container-fluid{
+    margin-bottom: 60px;
+}
+

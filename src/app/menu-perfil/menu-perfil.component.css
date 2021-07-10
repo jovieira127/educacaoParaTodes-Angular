@@ -1,19 +1,31 @@
+/* .container-fluid{
+    border: solid violet 0.2rem;
+} */
+
 .margen-fotos {
-    margin: 30px;
+    margin-left: 150px;
+    margin-top: 50px;
+    margin-bottom: 10px;
 }
 
-.borda-botao {
-    border-radius: 30px;
+button {
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 225px;
+    margin-bottom: 5px;
+    margin-left: -30px;
+    /* will-change: ; */
 }
 
-.cor-letra {
-    color: white;
+button:hover{
+    background-color: white;
+    text-overflow: black;
 }
+
 
 .tamanho-menu {
     width: 300px;
 }
 
-.margen-titulo {
-    margin: 25px;
-}
+
+
