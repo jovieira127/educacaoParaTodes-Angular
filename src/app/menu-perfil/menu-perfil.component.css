@@ -8,7 +8,7 @@
     margin-bottom: 10px;
 }
 
-button {
+.bt{
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
     width: 225px;
@@ -17,7 +17,7 @@ button {
     /* will-change: ; */
 }
 
-button:hover{
+.bt:hover{
     background-color: white;
     text-overflow: black;
 }
