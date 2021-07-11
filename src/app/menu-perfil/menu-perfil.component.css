@@ -17,3 +17,8 @@
 .margen-titulo {
     margin: 25px;
 }
+
+button:hover,
+.botao-ativado_active{
+    background-color: tomato;
+}
