@@ -15,3 +15,13 @@
   .cor-letra {
     color: white;
   }
+
+  .fixo{
+    position: fixed;
+    top: 6;
+    left: 0;
+  }
+
+  .fixo2{
+    position: fixed;
+  }
