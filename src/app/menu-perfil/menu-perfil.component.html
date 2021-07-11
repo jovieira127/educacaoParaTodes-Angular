@@ -1,79 +1,80 @@
-
-
 <div class="col tamanho-menu">
   <div class="col">
     <img src="{{foto}}" alt="Foto Perfil" width="80px" height="80px" class="rounded-circle margen-fotos margen-fotos">
   </div>
 
-    <div class="modal-body">
-      <ul class="list-group list-group-flush">
+  <div class="modal-body">
+    <ul class="list-group list-group-flush">
 
-        <button class="btn btn-outline-light botao-ativado_active" type="submit">
-          <li class="list-group-item bg-primary borda-botao cor-letra">Tutorial NOV</li>
-        </button>
+      <button class="btn btn-outline-light botao-ativado_active" type="submit">
+        <li class="list-group-item bg-primary borda-botao cor-letra">Tutorial NOV</li>
+      </button>
 
 
-        <button class="btn btn-outline-light botao-ativado_active" type="submit">
-          <li class="list-group-item bg-primary borda-botao cor-letra"> <a class="text-white"
-              routerLink='/perfil-adicionar-videos'>Adicionar conteudo </a>
-          </li> <!-- fazer um ngIf pra que esse botão desapareça quando a pessoa logada for estudante -->
-        </button>
+      <button class="btn btn-outline-light botao-ativado_active" type="submit">
+        <li class="list-group-item bg-primary borda-botao cor-letra"> <a class="text-white"
+            routerLink='/perfil-adicionar-videos'>Adicionar conteudo </a>
+        </li> <!-- fazer um ngIf pra que esse botão desapareça quando a pessoa logada for estudante -->
+      </button>
 
-        <button class="btn btn-outline-light botao-ativado_active" type="submit">
-          <li class="list-group-item bg-primary borda-botao cor-letra" routerLink = '/meus-conteudos'>Meus conteúdos</li>
-        </button>
+      <button class="btn btn-outline-light botao-ativado_active" type="submit">
+        <li class="list-group-item bg-primary borda-botao cor-letra" routerLink='/meus-conteudos'>Meus conteúdos</li>
+      </button>
 
-        <!-- <button class="btn btn-outline-light" type="submit">
+      <!-- <button class="btn btn-outline-light" type="submit">
             <li class="list-group-item bg-primary borda-botao cor-letra">Editar perfil</li>
           </button> -->
 
-          
-          <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-        <button [routerLink]="['/usuario-edit', id]" class="btn btn-outline-light botao-ativado_active" type="submit">
-            <li class="list-group-item bg-primary borda-botao cor-letra">Editar perfil</li>
-          </button>
 
-          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="staticBackdropLabel">Editar perfil</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
+      <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop" [routerLink]="['/usuario-edit', id]" class="btn btn-outline-light botao-ativado_active" type="submit">
+        
+          <li class="list-group-item bg-primary borda-botao cor-letra">Editar perfil</li>
+        </button>
+    </ul>
+  </div>
+</div>
 
-
-
-                <div class="modal-body">
-                  
-                  <div class="container col-md-4 mt-4 mb-4 center">
-                    <div class="row">
-                      <div class="col-md-12">
-                        
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Editar perfil</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
 
 
-                
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                  <button type="button" class="btn btn-primary">Salvar</button>
-                </div>
-              </div>
+
+      <div class="modal-body">
+
+        <div class="container col-md-4 mt-4 mb-4 center">
+          <div class="row">
+            <div class="col-md-12">
+
             </div>
           </div>
+        </div>
 
-      </ul>
+      </div>
 
+
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary">Salvar</button>
+      </div>
     </div>
   </div>
+</div>
 
 
-  <!-- MODAL -->
 
-  <!-- Button trigger modal -->
+
+
+
+<!-- MODAL -->
+
+<!-- Button trigger modal -->
 <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
   Launch static backdrop modal
 </button> -->
