@@ -1,39 +1,47 @@
 <div class="col tamanho-menu">
-  <div class="col">
-    <img src="{{foto}}" alt="Foto Perfil" width="80px" height="80px" class="rounded-circle margen-fotos margen-fotos">
-  </div>
+<div class="container-fluid">
+  <div class="row d-flex justify-content-start">
+    <div class="col-md-4">
+      <div class="col">
+        <img src="{{foto}}" alt="Foto Perfil" width="80px" height="80px" class="rounded-circle margen-fotos">
+      </div>
 
-  <div class="modal-body">
-    <ul class="list-group list-group-flush">
+      <div class="modal-body">
+        <ul class="list-group">
 
-      <button class="btn btn-outline-light botao-ativado_active" type="submit">
-        <li class="list-group-item bg-primary borda-botao cor-letra">Tutorial NOV</li>
-      </button>
-
-
-      <button class="btn btn-outline-light botao-ativado_active" type="submit">
-        <li class="list-group-item bg-primary borda-botao cor-letra"> <a class="text-white"
-            routerLink='/perfil-adicionar-videos'>Adicionar conteudo </a>
-        </li> <!-- fazer um ngIf pra que esse botão desapareça quando a pessoa logada for estudante -->
-      </button>
-
-      <button class="btn btn-outline-light botao-ativado_active" type="submit">
-        <li class="list-group-item bg-primary borda-botao cor-letra" routerLink='/meus-conteudos'>Meus conteúdos</li>
-      </button>
-
-      <!-- <button class="btn btn-outline-light" type="submit">
-            <li class="list-group-item bg-primary borda-botao cor-letra">Editar perfil</li>
-          </button> -->
+          <button class="btn btn-primary" type="submit">
+            <li class="text-white" routerLink='/feed'>Feed</li>
+          </button>
 
 
-      <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop" [routerLink]="['/usuario-edit', id]" class="btn btn-outline-light botao-ativado_active" type="submit">
-        
-          <li class="list-group-item bg-primary borda-botao cor-letra">Editar perfil</li>
-        </button>
-    </ul>
+          <button *ngIf='authService.voluntarie()' class="btn btn-primary" type="submit">
+            <li class=" text-white" routerLink='/perfil-adicionar-videos'> Adicionar Conteúdo
+            </li>
+          </button>
+
+          <button class="btn btn-primary" type="submit">
+            <li class=" text-white" routerLink='/meus-conteudos'>Meus conteúdos</li>
+          </button>
+
+          <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop"  class="btn btn-outline-light botao-ativado_active" type="submit">        
+            <li class="text-white">Editar perfil</li>
+          </button>
+
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
+</div>
 
+   
+
+     
+
+
+      
+   
+<!-- Modal -->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
   aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -45,16 +53,15 @@
 
 
 
-      <div class="modal-body">
+      
+    <div class="modal-body">
+      <ul class="list-group">
 
-        <div class="container col-md-4 mt-4 mb-4 center">
-          <div class="row">
-            <div class="col-md-12">
+       
 
-            </div>
-          </div>
-        </div>
+        
 
+        </ul>
       </div>
 
 
@@ -80,3 +87,4 @@
 </button> -->
 
 <!-- Modal -->
+ 
