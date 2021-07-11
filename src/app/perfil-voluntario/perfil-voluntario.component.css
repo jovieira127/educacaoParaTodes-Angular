@@ -25,3 +25,9 @@
 .cor-letra {
     color: white;
 }
+
+.button {
+    border-radius: 20px;
+    width: 225px;
+    margin-bottom: 5px;
+}
