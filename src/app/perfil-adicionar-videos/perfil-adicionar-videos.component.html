@@ -71,7 +71,7 @@
             um documento do Google Drive que esteja disponível no modo de leitura.</div>
         </div>
 
-        <button type="submit" class="btn btn-primary mt-5 mb-5 d-flex justify-content-center "
+        <button type="submit" class="btn btn-primary mt-5 mb-5 d-flex justify-content-center botao-adicionar"
           (click)='publicar()'>Adicionar Conteúdo</button>
 
         <!--  comentario routerLink = '/meus-conteudos' deve estar no final de publicar() ts -->
@@ -121,11 +121,9 @@
                     <th>{{item.id}}</th>
                     <td>{{item.descricao}}</td>
                     <td class="d-flex justify-content-end">
-                      <i class="fa fa-pencil batatinha" aria-hidden="true" [routerLink]="['/tema-edit', item.id]"
-                        data-bs-dismiss="modal"></i>
-                        <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" aria-labelledby="exampleModalLabel">Apagar</button>
-                      <!-- <i class="fa fa-trash batatinha" data-bs-toggle="modal" data-bs-target="#exampleModal" 
-                         aria-hidden="true"></i> -->
+                      <i class="fa fa-pencil batatinha" aria-hidden="true" [routerLink]="['/tema-edit', item.id]" data-bs-dismiss="modal"></i>
+                        <!-- <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" aria-labelledby="exampleModalLabel">Apagar</button> -->
+                      <i class="fa fa-trash batatinha" aria-hidden="true" [routerLink]="['/tema-delete', item.id]" data-bs-dismiss="modal"></i>
 
                     </td>
                   </tr>
@@ -142,13 +140,10 @@
 
 <!-- Model Delete -->
 
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
-</button>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+<!-- Modal Não Sei De Que -->
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -164,7 +159,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 <!-- <div class="modal" tabindex="-1" id="#exampleModal" data-bs-toggle="modal" data-bs-target="#exampleModal">
   <div class="modal-dialog">
@@ -192,27 +187,21 @@
         <h5 class="modal-title" id="exampleModalLabel">Cadastro de Tema</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+
       <div class="modal-body">
         <div class="form-group">
           <label for="titulo">Título</label>
           <input [(ngModel)]='tema.descricao' type="text" class="form-control" id="titulo" placeholder="título">
         </div>
 
-
-
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" (click)='cadastrar()' class="btn btn-success" data-bs-dismiss="modal">Salvar </button>
+      <div class="modal-footer d-flex justify-content-center">
+        <button type="button" class="btn btn-outline-primary botao-cadastrar-tema-cancelar" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" (click)='cadastrar()' class="btn text-white botao-cadastrar-tema-salvar" data-bs-dismiss="modal">Salvar </button>
       </div>
     </div>
   </div>
 </div>
-
-
-
-
-
 
 
 

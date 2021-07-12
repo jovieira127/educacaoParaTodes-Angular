@@ -18,7 +18,7 @@ export class PerfilVoluntarioComponent implements OnInit {
 
   constructor(
     private router: Router,
-    /* private temaService: TemaService, */
+    private temaService: TemaService,
     private authService: AuthService
     ) { }
 
@@ -29,6 +29,7 @@ export class PerfilVoluntarioComponent implements OnInit {
     
   }
   this.authService.refreshToken()
+  this.temaService.refreshToken()
   }
 
   

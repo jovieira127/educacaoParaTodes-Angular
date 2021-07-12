@@ -10,7 +10,6 @@ import { AuthService } from '../service/auth.service';
   styleUrls: ['./menu-perfil.component.css']
 })
 export class MenuPerfilComponent implements OnInit {
-
   nome = environment.nome
   foto = environment.foto
   id = environment.id
@@ -25,7 +24,7 @@ export class MenuPerfilComponent implements OnInit {
     private router: Router,
     public authService: AuthService,
     private route: ActivatedRoute
-    
+
   ) { }
 
   ngOnInit() {
@@ -36,9 +35,17 @@ export class MenuPerfilComponent implements OnInit {
       this.router.navigate(['/login'])
     }
     this.idUsuario = this.route.snapshot.params['id']
-    this.findByIdUser(this.idUsuario)
+    if(this.idUsuario != undefined){
+      this.findByIdUser(this.idUsuario)
+    }
+    
+    this.authService.refreshToken()
+
   }
 
+  editUserId(){
+    this.findByIdUser(this.id)
+  }
 
   confirmaSenha(event:any){
     this.authService.refreshToken()
@@ -68,7 +75,7 @@ export class MenuPerfilComponent implements OnInit {
         this.router.navigate(['/login'])
       })
 
-    }  
+    }
 }
 
   findByIdUser(id: number){
@@ -79,3 +86,6 @@ export class MenuPerfilComponent implements OnInit {
 
 }
 }
+
+
+ 

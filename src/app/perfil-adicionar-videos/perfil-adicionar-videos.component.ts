@@ -42,6 +42,8 @@ export class PerfilAdicionarVideosComponent implements OnInit {
       this.router.navigate(['/login'])
     }
     this.temaService.refreshToken()
+    this.postagemService.refreshToken()
+    this.authService.refreshToken()
     this.findAllTemas()
     /* comentario: aqui esta duplicado linha 41 */
     this.getAllTemas()

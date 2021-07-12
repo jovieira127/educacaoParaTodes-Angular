@@ -46,6 +46,8 @@ export class MeusConteudosComponent implements OnInit {
       this.router.navigate(['/login'])
     }
     this.temaService.refreshToken()
+    this.postagemService.refreshToken()
+    this.authService.refreshToken()
 
     this.findByIdUser()
     this.getAllTemas()

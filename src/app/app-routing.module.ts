@@ -18,6 +18,7 @@ import { PerfilVoluntarioComponent } from './perfil-voluntario/perfil-voluntario
 import { RodapeComponent } from './rodape/rodape.component';
 import { SaibaMaisComponent } from './saiba-mais/saiba-mais.component';
 import { TelaHomeComponent } from './tela-home/tela-home.component';
+import { TelaVisualizacaoComponent } from './tela-visualizacao/tela-visualizacao.component';
 import { TimeComponent } from './time/time.component';
 
 const routes: Routes = [
@@ -36,6 +37,7 @@ const routes: Routes = [
   {path: 'menu-lateral', component: MenuLateralComponent},
   {path: 'perfil-adicionar-videos', component: PerfilAdicionarVideosComponent},
   {path: 'perfil-voluntario', component: PerfilVoluntarioComponent},
+  {path: 'perfil-voluntario/:id', component: PerfilVoluntarioComponent},
   {path: 'tema-edit/:id', component: TemaEditComponent},
   {path: 'tema-delete/:id', component: TemaDeleteComponent},
   {path: 'meus-conteudos', component: MeusConteudosComponent},
@@ -43,7 +45,8 @@ const routes: Routes = [
   {path: 'postagem-delete/:id', component: PostagemDeleteComponent},
   {path: 'perfil-estudante', component: PerfilEstudanteComponent},
   {path: 'menu-perfil', component: MenuPerfilComponent},
-  {path: 'usuario-edit/:id', component: UsuarioEditComponent}
+  {path: 'usuario-edit/:id', component: UsuarioEditComponent},
+  {path: 'tela-visualizacao', component: TelaVisualizacaoComponent}
 
 ];
 

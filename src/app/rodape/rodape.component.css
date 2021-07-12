@@ -1,4 +1,17 @@
-ul.social-network{
+.bg-3{
+  background: #252525;
+  height: 100px;
+}
+
+.bg-4{
+  color: white;
+  text-align: center;
+  padding-top: 45px;
+  font-size: medium;
+}
+
+
+/* ul.social-network{
   list-style: none;
   padding: 0;
 }
@@ -23,13 +36,69 @@ ul.social-network li{
   color: #0072b1;
 }
 
+  <!-- .bg-1{
+    background: #d9bca8
+  } -->
+
+
+.bg-2{
+  background: #20232a;
+}
+
+.bg-3{
+  background: #7e5944;
+  height: 30px;
+}
+
+.bg-4{
+  color: white;
+  text-align: center;
+  padding-top: 0.6%;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+/* ul.social-network{
+  list-style: none;
+  padding: 0;
+}
+
+ul.social-network li{
+  display: inline;
+  margin: 0;
+  padding: 5px;
+}
+
+.fa{
+  font-size: 35pt;
+  color: white;
+  padding: 10px;
+}
+.fa-git-square:hover{
+  color: black;
+}
+
+
+.fa-linkedin-square:hover{
+  color: #0072b1;
+} */
+
 /* .bg-1{
   background: #d9bca8
  
 } */
 
 
-.bg-2{
+/* .bg-2{
   background: #20232a;
 }
 
@@ -45,4 +114,4 @@ ul.social-network li{
   padding-top: 0.6%;
       
   
-}
+} */
