@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Tema } from '../model/Tema';
+import { AuthService } from '../service/auth.service';
 import { TemaService } from '../service/tema.service';
 
 
@@ -17,7 +18,8 @@ export class PerfilVoluntarioComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private temaService: TemaService
+    /* private temaService: TemaService, */
+    private authService: AuthService
     ) { }
 
   ngOnInit() { 
@@ -26,6 +28,9 @@ export class PerfilVoluntarioComponent implements OnInit {
     this.router.navigate(['/login'])
     
   }
+  this.authService.refreshToken()
   }
+
+  
 
 }

@@ -33,12 +33,14 @@ export class TemaDeleteComponent implements OnInit {
   }
 
   findByIdTema(id: number){
+    this.temaService.refreshToken()
       this.temaService.getByIdTema(id).subscribe((resp: Tema)=>{
           this.tema = resp
       })
   }
 
   apagar(){
+    this.temaService.refreshToken()
       this.temaService.deleteTema(this.idTema).subscribe(()=>{
           this.alerta.showAlertSuccess('Tema apagado com sucesso')
           this.router.navigate(['/tema'])

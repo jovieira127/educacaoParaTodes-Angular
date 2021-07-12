@@ -53,18 +53,21 @@ export class FeedComponent implements OnInit {
   }
 
   findByIdUser() {
+    this.authService.refreshToken()
     this.authService.getByIdUser(this.idUser).subscribe((resposta: Usuario) => {
       this.usuario = resposta
     })
 
   }
   getAllTemas() {
+    this.temaService.refreshToken()
     this.temaService.getAllTema().subscribe((resposta: Tema[]) => {
       this.listaTemas = resposta
     })
   }
 
   getAllPostagens() {
+    this.postagemService.refreshToken()
     this.postagemService.getAllPostagens().subscribe((resposta: Postagem[]) => {
       this.listaPostagens = resposta
 

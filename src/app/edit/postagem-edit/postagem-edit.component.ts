@@ -40,24 +40,28 @@ export class PostagemEditComponent implements OnInit {
   }
 
   findByIdPostagem(id: number) {
+    this.postagemService.refreshToken()
     this.postagemService.getByIdPostagem(id).subscribe((resp: Postagem) => {
       this.postagem = resp
     })
   }
 
   findByIdTema() {
+    this.postagemService.refreshToken()
     this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema) => {
       this.tema = resp
     })
   }
 
   findAllTemas() {
+    this.postagemService.refreshToken()
     this.temaService.getAllTema().subscribe((resp: Tema[]) => {
       this.listaTemas = resp
     })
   }
 
   atualizar() {
+    this.postagemService.refreshToken()
     this.tema.id = this.idTema
     this.postagem.tema = this.tema
 

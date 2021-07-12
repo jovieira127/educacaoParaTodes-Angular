@@ -53,6 +53,7 @@ export class MeusConteudosComponent implements OnInit {
 
 
   getAllPostagens() {
+    this.postagemService.refreshToken()
     this.postagemService.getAllPostagens().subscribe((resposta: Postagem[]) => {
       this.listaPostagens = resposta
 
@@ -61,6 +62,7 @@ export class MeusConteudosComponent implements OnInit {
   }
 
   findByIdTema() {
+    this.temaService.refreshToken()
     this.temaService.getByIdTema(this.idTema).subscribe((resposta: Tema) => {
       this.tema = resposta
     })
@@ -69,17 +71,20 @@ export class MeusConteudosComponent implements OnInit {
 
 
   getAllTemas() {
+    this.temaService.refreshToken()
     this.temaService.getAllTema().subscribe((resposta: Tema[]) => {
       this.listaTemas = resposta
     })
   }
 
   findByIdUser() {
+    this.authService.refreshToken()
     this.authService.getByIdUser(this.idUser).subscribe((resposta: Usuario) => {
       this.usuario = resposta
     })
   }
   publicar() {
+    this.postagemService.refreshToken()
     this.tema.id = this.idTema
     this.postagem.tema = this.tema
 
@@ -98,6 +103,7 @@ export class MeusConteudosComponent implements OnInit {
   }
 
   atualizar(){
+    this.postagemService.refreshToken()
     this.tema.id = this.idTema
     this.postagem.tema = this.tema
     
@@ -109,6 +115,7 @@ export class MeusConteudosComponent implements OnInit {
   }
 
 apagar(){
+  this.postagemService.refreshToken()
   this.postagemService.deletePostagem(this.idPost).subscribe(()=>{
     this.alerta.showAlertSuccess('Postagem apagada com sucesso')
     this.router.navigate(['/login'])

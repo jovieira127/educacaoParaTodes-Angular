@@ -35,12 +35,14 @@ export class PostagemDeleteComponent implements OnInit {
   }
 
   findByIdPostagem(id: number) {
+    this.postagemService.refreshToken()
     this.postagemService.getByIdPostagem(id).subscribe((resp: Postagem) => {
       this.postagem = resp
     })
   }
 
   apagar(){
+    this.postagemService.refreshToken()
     this.postagemService.deletePostagem(this.idPost).subscribe(()=>{
       this.alerta.showAlertSuccess('Postagem apagada com sucesso')
       this.router.navigate(['/meus-conteudos'])

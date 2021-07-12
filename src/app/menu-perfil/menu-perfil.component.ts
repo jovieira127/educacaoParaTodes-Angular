@@ -41,14 +41,17 @@ export class MenuPerfilComponent implements OnInit {
 
 
   confirmaSenha(event:any){
+    this.authService.refreshToken()
     this.senhaConfirmada = event.target.value
   }
 
   selecionarUsuario(event:any){
+    this.authService.refreshToken()
     this.tipoUsuario = event.target.value
   }
 
   atualizar(){
+    this.authService.refreshToken()
     this.usuario.tipo = this.tipoUsuario
 
     if(this.usuario.senha != this.senhaConfirmada){
@@ -69,6 +72,7 @@ export class MenuPerfilComponent implements OnInit {
 }
 
   findByIdUser(id: number){
+    this.authService.refreshToken()
     this.authService.getByIdUser(id).subscribe((resp: Usuario)=>{
       this.usuario = resp
     }) 

@@ -48,12 +48,15 @@ export class PerfilAdicionarVideosComponent implements OnInit {
   }
 
   findByIdTema() {
+    this.temaService.refreshToken()
     this.temaService.getByIdTema(this.idTema).subscribe((resposta: Tema) => {
       this.tema = resposta
+      
     })
   }
 
   findAllTemas() {
+    this.temaService.refreshToken()
     this.temaService.getAllTema().subscribe((resp: Tema[]) => {
       this.listaTemas = resp
     })
@@ -61,12 +64,14 @@ export class PerfilAdicionarVideosComponent implements OnInit {
 
   /* comentario: aqui esta duplicado linha 51 */
   getAllTemas() {
+    this.temaService.refreshToken()
     this.temaService.getAllTema().subscribe((resposta: Tema[]) => {
       this.listaTemas = resposta
     })
   }
 
   getAllPostagens() {
+    this.temaService.refreshToken()
     this.postagemService.getAllPostagens().subscribe((resposta: Postagem[]) => {
       this.listaPostagens = resposta
 
@@ -75,6 +80,7 @@ export class PerfilAdicionarVideosComponent implements OnInit {
   }
 
   findByIdUser() {
+    this.temaService.refreshToken()
     this.authService.getByIdUser(this.idUser).subscribe((resposta: Usuario) => {
       this.user = resposta
     })
@@ -82,6 +88,7 @@ export class PerfilAdicionarVideosComponent implements OnInit {
 
 
   cadastrar() {
+    this.temaService.refreshToken()
     this.temaService.postTema(this.tema).subscribe((resp: Tema) => {
       this.tema = resp
       this.alertas.showAlertSuccess('tema cadastrado com sucesso')
@@ -91,6 +98,7 @@ export class PerfilAdicionarVideosComponent implements OnInit {
   }
 
   publicar() {
+    this.temaService.refreshToken()
     this.tema.id = this.idTema
     this.postagem.tema = this.tema
 
