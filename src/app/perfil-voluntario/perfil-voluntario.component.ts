@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Tema } from '../model/Tema';
+import { Usuario } from '../model/Usuario';
 import { AuthService } from '../service/auth.service';
 import { TemaService } from '../service/tema.service';
 
@@ -12,9 +13,14 @@ import { TemaService } from '../service/tema.service';
   styleUrls: ['./perfil-voluntario.component.css']
 })
 export class PerfilVoluntarioComponent implements OnInit {
+
+  nome = environment.nome
+  id = environment.id
  
   tema: Tema = new Tema()
   listaTemas: Tema[]
+  usuario: Usuario = new Usuario()
+  
 
   constructor(
     private router: Router,
@@ -35,3 +41,5 @@ export class PerfilVoluntarioComponent implements OnInit {
   
 
 }
+
+

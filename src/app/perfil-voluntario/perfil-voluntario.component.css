@@ -2,6 +2,7 @@
     width: 300px;
 }
 
+
 .margen-titulo {
     margin: 25px;
 }
@@ -62,8 +63,64 @@
     border-bottom-left-radius: 20px;
 }
 
+.bt{
+    border-radius: 20px;
+    width: 200px;
+    margin-bottom: 4px;
+    height: 45px;
+    border: solid 0.1rem #ae84ff;
+    background-color: white;
+}
 
+.bt:hover{
+    background-color: #5392c8;
+}
 
+.tx{
+    color: rgb(253, 254, 255);
+}
+
+.ct{
+    border-radius: 20px;
+    height: 270px;
+    width: 230px;
+    border: solid 0.1rem gray;
+    background-color: #ae84ff;
+    margin-right: 130px
+}
+
+.bg-tela{
+    background-color: rgb(229, 226, 226);
+}
+
+.font-900-titulo-telas{
+    font-family:'Lato', sans-serif;
+    font-weight: 900;
+    color:white;
+    font-size: 30px;
+}
+
+.font-700-titulo-texto{
+    font-family:'Lato', sans-serif;
+    font-weight: 700;
+    color: white;
+    font-size: 16px;
+
+}
+
+.font-600-texto{
+    font-family:'Lato', sans-serif;
+    font-weight: normal;
+    color: black;
+    font-size: 16px;
+}
+
+.font-botao-menu-perfil{
+    font-family:'Lato', sans-serif;
+    font-weight: 500;
+    color: black;
+    font-size: 14px;
+}
 
 
 

@@ -110,7 +110,8 @@
             <h5 class="card-title m-0">{{item.titulo}}</h5>
             <small class="text-muted"> Tema: {{item.tema.descricao}}</small>
             <p class="card-text mt-3">{{item.texto}}</p>
-            <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>{{item.linkVideo}}</iframe>
+
+            <iframe width="560" height="315" [src]="atualizarLinkVideo(item.linkVideo)" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
             <p class="card-text"><small class="text-dark">
                 {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</small></p>

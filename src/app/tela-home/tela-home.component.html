@@ -1,22 +1,25 @@
-<app-menu-superior></app-menu-superior>
-<div class="container-fluid">
-    <div class="row d-flex justify-content-center align-items-center" id="img-bg" >
-        <div class="col-md-4">
-            <p class="
-            ms-3 text-start fs-4 fw-bold text-white p-4 entrelinhas">
-                CONECTE-SE COM NOVAS PESSOAS E APRENDA AQUELES CONTEÚDOS QUE VOCÊ SEMPRE TEVE DIFICULDADE
-            </p>
-            <div class="row justify-content-center d-flex">
-                <div class="col-md-4 justify-content-center d-flex"> 
-                    <button class="btn btn-outline-light align-items-center " routerLink='/cadastrar'>Cadastre-se</button>
+<body data-bs-spy="scroll" data-bs-target="#navbar-example">
+
+    <app-menu-superior></app-menu-superior>
+    <div class="container-fluid">
+        <div class="row d-flex justify-content-center align-items-center" id="img-bg" >
+            <div class="col-md-4">
+                <p class="
+                ms-3 text-start fs-4 fw-bold text-white p-4 entrelinhas ">
+                    CONECTE-SE COM NOVAS PESSOAS E APRENDA AQUELES CONTEÚDOS QUE VOCÊ SEMPRE TEVE DIFICULDADE
+                </p>
+                <div class="row justify-content-center d-flex">
+                    <div class="col-md-4 justify-content-center d-flex"> 
+                        <button class="btn btn-outline-light align-items-center " routerLink='/cadastrar'>Cadastre-se</button>
+                    </div>
                 </div>
             </div>
+    
         </div>
-        
+    
     </div>
-
-</div>
-
-<app-saiba-mais></app-saiba-mais>
-<app-time></app-time>
-<app-rodape></app-rodape>
+    
+    <app-saiba-mais id="scrollsaiba"></app-saiba-mais>
+    <app-time id="scrolltime"></app-time>
+    <app-rodape></app-rodape>
+    </body>

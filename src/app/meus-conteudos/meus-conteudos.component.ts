@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Postagem } from '../model/Postagem';
@@ -37,7 +38,8 @@ export class MeusConteudosComponent implements OnInit {
     private temaService: TemaService,
     private postagemService: PostagemService,
     private authService: AuthService,
-    private alerta: AlertasService
+    private alerta: AlertasService,
+    public sanitizer: DomSanitizer 
     
     ) { }
 
@@ -123,7 +125,10 @@ apagar(){
     this.router.navigate(['/login'])
   })
 }
+atualizarLinkVideo(linkVideo: string) {
+  return this.sanitizer.bypassSecurityTrustResourceUrl(linkVideo);
 
+}
 
 }
 

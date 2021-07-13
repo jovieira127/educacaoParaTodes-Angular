@@ -26,13 +26,16 @@
     border-radius: 20px;
     border-color: rgb(159, 167, 164);
     padding: 20px 20px 20px 20px;
+    box-shadow: 1px 2px 10px rgb(159, 167, 164), 1px  2px 1px rgb(159, 167, 164);
 }
 
 .botao-adicionar{
     border-radius: 20px;
     padding: 10px;
     margin-left: 220px;
-    
+    box-shadow: 1px 2px 10px rgb(159, 167, 164), 1px  2px 1px rgb(159, 167, 164);
+    background-color: #20629d;
+
 }
 
 .batatinha{
@@ -49,7 +52,7 @@ height: 30px;
     margin-left: 10px;
     margin-top: 20px;
     background-color: #20629d;
-    
+
 }
 
 .botao-cadastrar-tema-cancelar{

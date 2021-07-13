@@ -1,41 +1,28 @@
 <app-menu-superior></app-menu-superior>
+<div class="container-fluid d-flex bg-tela">
+  <div class="row d-flex bg-tela mt-2 justify-content-center">
+    <h1 class="text-center mb-5 mt-3">Bem-vindo a tela de visualização, assista aqui sua aula!</h1>  
 
-
-<div class="container-fluid bg-color">
-  <button class="bt-grande mt-4">Boas-vindas</button>
-  <div class="row d-flex">
-    <div class="col-md-4">
-      <app-menu-perfil></app-menu-perfil>
-    </div>
-
-    <!--Frase-->
-    <div class="col-md-8">
-      <h2 class="mt-4 mb-4 ms-5">Olá Voluntario!!!</h2>
-      <p class="mb-3"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque repudiandae corrupti dolorem <br>quis sint! Quibusdam illum quia at sequi obcaecati quis sint! Quibusdam illum quia at sequi obcaecati.<br> quis sint! Quibusdam illum quia at sequi obcaecati
-      </p>
-      <!--/Titulo-->
- 
-      <!--Cards-->
-      <div class="col-md-12">
-        <div class="row">
-          <div class="row justify-content-start d-flex">
-            <div class="col-sm-10 d-flex justify-content-start mb-3">
-              <iframe width="577" height="362" src="https://www.youtube.com/embed/nLv7NhlM91s"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-            </div>
-          </div>
-        </div> 
-
-        <!--/Botão-->
-          <button class="btn btn-primary button mt-2 mb-5 justify-content-center" type="submit">
-            <li class="text-white" routerLink='/perfil-adicionar-videos'>Adicionar Conteúdo
-            </li>
-          </button>
+    <div class="col-md-4 mt-5 mb-4 ct">
+      <div class="row d-flex mt-2">
+        <h3 class="font-700-titulo-texto mt-2">Olá, {{nome}}!</h3>
+        <div class="col-md-6">
+          <button class="bt d-flex justify-content-center align-items-center font-botao-menu-perfil" routerLink='/feed'>Feed</button>
+          <button class="bt d-flex justify-content-center align-items-center font-botao-menu-perfil" routerLink='/meus-conteudos'>Meus conteúdos</button>
+          <button class="bt d-flex justify-content-center align-items-center font-botao-menu-perfil" routerLink='/perfil-adicionar-videos'>Adicionar conteúdos</button>
+          <button class="bt d-flex justify-content-center align-items-center font-botao-menu-perfil"[routerLink]="['/usuario-edit', id]">Editar perfil</button>
         </div>
       </div>
     </div>
+
+    <div class="col-md-8 col-fluid justify-content-center mt-1 mb-4">
+      <iframe width="590" height="350" src="https://www.youtube.com/embed/joFSMgR-OEk" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+<app-rodape></app-rodape>
 
 
 
