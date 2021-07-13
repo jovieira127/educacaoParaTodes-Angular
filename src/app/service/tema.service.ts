@@ -1,4 +1,3 @@
-
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -30,6 +29,10 @@ export class TemaService {
   getByIdTema(id: number): Observable<Tema>{
     return this.http.get<Tema>(`${this.uri}/temas/${id}`, this.token)
   } 
+
+  getByDescricaoTema(descricao: string): Observable<Tema[]>{
+    return this.http.get<Tema[]>(`${this.uri}/temas/descricao/${descricao}` , this.token)
+  }
 
   postTema(tema: Tema): Observable<Tema>{
     return this.http.post<Tema>(`${this.uri}/temas` ,tema, this.token)

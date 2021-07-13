@@ -1,129 +1,18 @@
-<div class="col tamanho-menu">
-  <div class="container-fluid">
-    <div class="row d-flex justify-content-start">
-      <div class="col-md-4">
-        <div class="col">
-          <img src="{{foto}}" alt="Foto Perfil" width="80px" height="80px" class="rounded-circle margen-fotos">
+<div class="container-fluid d-flex">
+  <div class="row d-flex  mt-2 justify-content-center">
+    <div class="col-md-1 mt-5 mb-4 ct">
+      <div class="row d-flex">
+        <div class="col-md-4 mt-4">
+          <button class="bt d-flex justify-content-center align-items-center font-botao-menu-perfil" routerLink='/feed'>Feed</button>
+          <button class="bt d-flex justify-content-center align-items-center font-botao-menu-perfil" routerLink='/meus-conteudos'>Meus conteúdos</button>
+          <button class="bt d-flex justify-content-center align-items-center font-botao-menu-perfil" routerLink='/perfil-adicionar-videos'>Adicionar conteúdos</button>
+          <button class="bt d-flex justify-content-center align-items-center font-botao-menu-perfil"[routerLink]="['/usuario-edit', id]">Editar perfil</button>
         </div>
-
-        <div class="modal-body">
-          <ul class="list-group">
-
-            <button class="btn btn-primary bt" type="submit">
-              <li class="text-white" routerLink='/feed'>Feed</li>
-            </button>
-
-
-            <button *ngIf='authService.voluntarie()' class="btn btn-primary bt" type="submit">
-              <li class=" text-white" routerLink='/perfil-adicionar-videos'> Adicionar Conteúdo
-              </li>
-            </button>
-
-            <button class="btn btn-primary bt" type="submit">
-              <li class=" text-white" routerLink='/meus-conteudos'>Meus conteúdos</li>
-            </button>
-
-            <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
-              class="btn botao-ativado_active bt" type="submit">
-              <li class="text-white">Editar perfil</li>
-            </button>
-
-          </ul>
         </div>
       </div>
-    </div>
   </div>
 </div>
 
-
-
-
-
-
-
-
-<!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-  aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Editar perfil</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-
-
-
-
-      <div class="modal-body">
-        <ul class="list-group">
-
-          <div class="form-group">
-            <i class="fa fa-id-card-o p-2" aria-hidden="true"></i>
-            <label for="nome">Nome Completo:</label>
-            <input [(ngModel)]='usuario.nome' type="text" class="backgroundInput" name="nome" id="nome"
-              placeholder="  Digite seu nome completo" />
-          </div>
-
-          <div class="form-group">
-            <i class="fa fa-user-circle p-2" aria-hidden="true"></i>
-            <label for="email">Email:</label>
-            <input [(ngModel)]='usuario.email' class="backgroundInput" type="email" name="email" id="email"
-              placeholder="  Digite seu email">
-          </div>
-
-
-          <div class="form-group">
-            <i class="fa fa-lock p-2" aria-hidden="true"></i>
-            <label for="senha">Senha</label>
-            <input (input)='confirmaSenha($event)' class="backgroundInput" type="password" name="senha" id="senha"
-              placeholder="  Digite sua senha" />
-          </div>
-
-          <div class="form-group">
-            <i class="fa fa-lock p-2" aria-hidden="true"></i>
-            <label for="confirmSenha">Confirmar Senha</label>
-            <input [(ngModel)]='usuario.senha' class="backgroundInput" type="password" name="confirmSenha"
-              id="confirmSenha" placeholder="  Confirme sua senha">
-          </div>
-
-          <div class="form-group">
-            <i class="fa fa-camera p-2" aria-hidden="true"></i>
-            <label for="foto">Link da Foto</label>
-            <input [(ngModel)]='usuario.foto' class="backgroundInput" type="text" name="foto" id="foto"
-              placeholder="  Digite o link da sua foto de perfil">
-          </div>
-
-          <div class="form-group">
-            <i class="fa fa-users p-2" aria-hidden="true"></i>
-            <label for="tipo">Tipo de Cadastro</label>
-            <select class="backgroundInput" name="tipo" id="tipo" (change)='selecionarUsuario($event)'>
-              <option class="text-dark"> Selecione um tipo de cadastro</option>
-              <option class="text-dark" value="estudante">Quero ser Estudante!</option>
-              <option class="text-dark" value="voluntarie">Quero ser Voluntárie!</option>
-            </select>
-          </div>
-          <div class="d-flex justify-content-center">
-            <button type="submit" routerLink='/perfil-voluntario'>Cancelar</button>
-          </div>
-          <div class="d-flex justify-content-center">
-            <button type="submit" (click)='atualizar()'>Atualizar</button>
-          </div>
-
-
-
-        </ul>
-      </div>
-
-
-
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-        <button type="button" class="btn btn-primary">Salvar</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 

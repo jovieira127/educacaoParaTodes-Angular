@@ -1,27 +1,45 @@
 .container {
-    display: flex;
-    justify-content: center;
-    align-content: space-between;
-  }
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+}
 
-  .card{
-    width: 300px;
-  }
-  
-  .borda-botao {
-    border-radius: 30px;
-  }
-  
-  .cor-letra {
-    color: white;
-  }
+.card{
+  width: 300px;
+}
 
-  .fixo{
-    position: fixed;
-    top: 6;
-    left: 0;
-  }
+.borda-botao {
+  border-radius: 30px;
+}
 
-  .fixo2{
-    position: fixed;
-  }
+.cor-letra {
+  color: white;
+}
+
+.fixo{
+  position: fixed;
+  top: 6;
+  left: 0;
+}
+
+.fixo2{
+  position: fixed;
+}
+
+.wd{
+  width: 40rem;
+}
+
+.hg{
+  height: 31rem;
+}
+
+.hg-card{
+  height: 100%;
+}
+
+
+.ico{
+  font-size: 20pt;
+  display: inline-block;
+}

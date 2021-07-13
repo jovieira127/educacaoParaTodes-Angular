@@ -1,6 +1,4 @@
-.tamanho-menu {
-    width: 300px;
-}
+
 
 
 .margen-titulo {
@@ -54,14 +52,6 @@
     margin-left: 15%;
 }
 
-.bt-grande{
-    width: 500px;
-    height: 80px;
-    background-color: #6099ca;
-    margin-right: 0%;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-}
 
 .bt{
     border-radius: 20px;
@@ -70,10 +60,11 @@
     height: 45px;
     border: solid 0.1rem #ae84ff;
     background-color: white;
+    box-shadow: 1px 2px 10px rgb(159, 167, 164), 1px  2px 1px rgb(159, 167, 164);
 }
 
 .bt:hover{
-    background-color: #5392c8;
+    background-color: #d4c1fa;
 }
 
 .tx{
@@ -86,7 +77,13 @@
     width: 230px;
     border: solid 0.1rem gray;
     background-color: #ae84ff;
-    margin-right: 130px
+    /* margin-left: 5%; */
+    box-shadow: 1px 2px 10px rgb(159, 167, 164), 1px  2px 1px rgb(159, 167, 164);
+    
+}
+
+.video{
+    margin-right: 13%;
 }
 
 .bg-tela{
@@ -96,32 +93,80 @@
 .font-900-titulo-telas{
     font-family:'Lato', sans-serif;
     font-weight: 900;
-    color:white;
+    color:#202122;
     font-size: 30px;
+}
+
+.font-800-titulo-telas{
+    font-family:'Lato', sans-serif;
+    font-weight: 600;
+    color:#20629d;
+    font-size: 24px;
 }
 
 .font-700-titulo-texto{
     font-family:'Lato', sans-serif;
     font-weight: 700;
-    color: white;
-    font-size: 16px;
+    color: #202122;
+    font-size: 22px;
 
 }
 
-.font-600-texto{
+/* .font-600-texto{
+    font-family:'Lato', sans-serif;
+    font-weight: lighter;
+    color: #202122;
+    font-size: 16px;
+} */
+
+.font-pv{
+    font-family:'Lato', sans-serif;
+    font-weight: 400;
+    color:#3b3b3b; 
+    font-size: 16px;
+    /* line-height: 1.5; */
+
+}
+
+.font-600-texto-form{
     font-family:'Lato', sans-serif;
     font-weight: normal;
-    color: black;
+    color: #202122;
     font-size: 16px;
+}
+
+ .font-600-texto-botao{
+    font-family:'Lato', sans-serif;
+    font-weight: 700;
+    color: white;
+    font-size: 16px;
+}
+
+.font-600-pequeno{
+    font-family:'Lato', sans-serif;
+    font-weight: normal;
+    color: rgb(122, 122, 122);
+    font-size: 14px;
 }
 
 .font-botao-menu-perfil{
     font-family:'Lato', sans-serif;
-    font-weight: 500;
-    color: black;
+    font-weight: 600;
+    color: #5d5c5c;
     font-size: 14px;
 }
 
+.texto{
+    margin-left: 60%;
+    line-height: 1.5;
+}
+
+
+
+/* .p{
+    white-space: pre-line;
+}
+ */
 
 
 

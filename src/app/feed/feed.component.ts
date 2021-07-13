@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Postagem } from '../model/Postagem';
@@ -19,6 +20,7 @@ export class FeedComponent implements OnInit {
 
   postagem: Postagem = new Postagem()
   listaPostagens: Postagem[]
+  tituloPost: string
   idPost: number
 
 
@@ -38,7 +40,8 @@ export class FeedComponent implements OnInit {
     private temaService: TemaService,
     private postagemService: PostagemService,
     private authService: AuthService,
-    private alerta: AlertasService
+    private alerta: AlertasService,
+    public sanitizer: DomSanitizer 
   ) { }
 
   ngOnInit() {
@@ -46,6 +49,8 @@ export class FeedComponent implements OnInit {
       this.router.navigate(['/login'])
     }
     this.temaService.refreshToken()
+    this.postagemService.refreshToken()
+    this.authService.refreshToken()
 
     this.findByIdUser()
     this.getAllTemas()
@@ -73,6 +78,22 @@ export class FeedComponent implements OnInit {
 
     })
 
+  }
+
+  atualizarLinkVideo(linkVideo: string) {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(linkVideo);
+  
+  }
+
+  findByTituloPostagem(){
+    if(this.tituloPost == ''){
+      this.getAllPostagens()
+    }else{
+      this.postagemService.getByTituloPostagem(this.tituloPost).subscribe((resposta: Postagem[])=>{
+        this.listaPostagens = resposta
+      })
+    }
+   
   }
 
 

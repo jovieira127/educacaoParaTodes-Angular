@@ -59,4 +59,61 @@ height: 30px;
     margin-left: 10px;
     margin-top: 20px;
 }
+.font-900-titulo-telas{
+    font-family:'Lato', sans-serif;
+    font-weight: 900;
+    color:white;
+    font-size: 30px;
+}
+
+.font-700-titulo-texto{
+    font-family:'Lato', sans-serif;
+    font-weight: 700;
+    color: #202122;
+    font-size: 22px;
+
+}
+
+.font-600-texto{
+    font-family:'Lato', sans-serif;
+    font-weight: lighter;
+    color: #202122;
+    font-size: 16px;
+}
+
+.font-600-texto-form{
+    font-family:'Lato', sans-serif;
+    font-weight: normal;
+    color: #202122;
+    font-size: 16px;
+}
+
+ .font-600-texto-botao{
+    font-family:'Lato', sans-serif;
+    font-weight: 700;
+    color: white;
+    font-size: 16px;
+}
+
+.font-600-pequeno{
+    font-family:'Lato', sans-serif;
+    font-weight: normal;
+    color: rgb(122, 122, 122);
+    font-size: 14px;
+}
+
+.font-botao-menu-perfil{
+    font-family:'Lato', sans-serif;
+    font-weight: 600;
+    color: #202122;
+    font-size: 14px;
+}
+
+.bg-tela{
+    background-color: rgb(229, 226, 226);
+}
+
+.margin-rodape{
+    margin-bottom: 30px;
+}
 
