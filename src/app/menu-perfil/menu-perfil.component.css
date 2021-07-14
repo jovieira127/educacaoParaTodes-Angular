@@ -1,0 +1,140 @@
+.tamanho-menu {
+    width: 300px;
+}
+
+
+.margen-titulo {
+    margin: 25px;
+}
+
+.margen-discricao {
+    margin: 35;
+}
+
+.margen-cards {
+    margin: 15px;
+}
+
+.margen-fotos {
+    margin: 30px;
+}
+
+.borda-botao {
+    border-radius: 30px;
+}
+
+.cor-letra {
+    color: white;
+}
+
+.button {
+    border-radius: 20px;
+    width: 225px;
+    margin-bottom: 5px;
+}
+
+.bg-color{
+    background-color: rgb(243, 243, 243);
+}
+
+.tamanho-menu {
+    width: 300px;
+}
+
+.margen-titulo {
+    margin: 25px;
+}
+
+
+.button {
+    border-radius: 20px;
+    width: 330px;
+    /* margin-left: 250px; */
+    background-color: #20629d;
+    margin-left: 15%;
+}
+
+.bt-grande{
+    width: 500px;
+    height: 80px;
+    background-color: #6099ca;
+    margin-right: 0%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.bt{
+    border-radius: 20px;
+    width: 200px;
+    margin-bottom: 4px;
+    height: 45px;
+    border: solid 0.1rem #ae84ff;
+    background-color: white;
+    box-shadow: 1px 2px 10px rgb(159, 167, 164), 1px  2px 1px rgb(159, 167, 164);
+}
+
+.bt:hover{
+    background-color: #d4c1fa;
+}
+
+.tx{
+    color: rgb(253, 254, 255);
+}
+
+.ct{
+    border-radius: 20px;
+    height: 270px;
+    width: 230px;
+    border: solid 0.1rem gray;
+    background-color: #ae84ff;
+    margin-right: 130px;
+    box-shadow: 1px 2px 10px rgb(159, 167, 164), 1px  2px 1px rgb(159, 167, 164);
+
+}
+
+.bg-tela{
+    background-color: rgb(229, 226, 226);
+}
+.font-600-texto-botao{
+    font-family:'Lato', sans-serif;
+    font-weight: 600;
+    color: white;
+    font-size: 16px;
+}
+
+.font-botao-menu-perfil{
+    font-family:'Lato', sans-serif;
+    font-weight: 600;
+    color: #5d5c5c;
+    font-size: 14px;
+}
+
+/* .font-900-titulo-telas{
+    font-family:'Lato', sans-serif;
+    font-weight: 900;
+    color:white;
+    font-size: 30px;
+}
+
+.font-700-titulo-texto{
+    font-family:'Lato', sans-serif;
+    font-weight: 700;
+    color: white;
+    font-size: 16px;
+
+}
+
+.font-600-texto{
+    font-family:'Lato', sans-serif;
+    font-weight: normal;
+    color: black;
+    font-size: 16px;
+}
+
+.font-botao-menu-perfil{
+    font-family:'Lato', sans-serif;
+    font-weight: normal;
+    color: black;
+    font-size: 14px;
+} */
+

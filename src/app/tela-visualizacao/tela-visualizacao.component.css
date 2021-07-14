@@ -1,0 +1,56 @@
+/* 
+
+.mat-sidenav{
+    border: solid 0.1rem;
+    border-radius: 10px;
+    text-align: center;
+    border-color: #666;
+    height: 440px;
+    width: 350px;
+} /
+
+.card{
+    width: 53.8rem;
+    height: 10rem;
+}
+
+.h4{
+    margin-bottom: 60px;
+}
+
+.bt{
+
+    border-radius: 10px;
+    width: 280px;
+    margin-bottom: 5px;
+    height: 50px;
+    border: solid 0.1rem #20629d;
+background-color: white;
+
+}
+
+/ .fixo{
+    position: fixed;
+    top: 6;
+    left: 0;
+}
+ */
+ .bt:hover{
+    background-color: #5392c8;
+
+}
+
+.tx{
+    margin-left: 59px;
+}
+.ct{
+    border-radius: 20px;
+    height: 350px;
+    width: 310px;
+    border: solid 0.1rem gray;
+    background-color: #5392c8;
+}
+.bg-tela{
+    background-color: gray;
+}
+

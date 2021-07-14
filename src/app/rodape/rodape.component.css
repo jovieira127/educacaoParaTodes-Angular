@@ -1,0 +1,38 @@
+.bg-3{
+  background: #252525;
+  height: 250px;
+}
+
+.bg-4{
+  color: white;
+  text-align: center;
+  padding-top: 0px;
+  margin-left: 25px;
+  /* font-size: small; */
+  line-height: 1.5; 
+  text-align: justify;
+}
+
+.bg-2{
+  color: white;
+  text-align: center;
+  padding-top: 45px;
+  margin-left: 25px;
+ /*  font-size: medium; */
+
+}
+
+.bg-5{
+  color: white;
+  text-align: left;
+  padding-top: 30px;
+  margin-left: 25px;
+  /* font-size: small; */
+}
+
+.font-600-pequeno{
+  font-family:'Lato', sans-serif;
+  font-weight: normal;
+  color: rgb(179, 179, 179);
+  font-size: 14px;
+}
