@@ -1,25 +1,23 @@
 <app-menu-superior></app-menu-superior>
-
-<div class="container-fluid d-flex">
-  <div class="row d-flex  mt-2 justify-content-center">
-    <h2 class="text-cente mt-4 font-800-titulo-telas d-flex justify-content-center">Bem-vindo ao Educação para todes, {{nome}}!</h2>  
-    <p class="justify-content-center d-flex font-pv mb-5">Assista ao vídeo abaixo e descubra como compartilhar o seu conhecimento:</p>
-    <div class="col-md-1 mt-2 mb-4 ct">
-      <div class="row d-flex">
-        <div class="col-md-4 mt-4">
-          <button class="bt d-flex justify-content-center align-items-center font-botao-menu-perfil" routerLink='/feed'>Feed</button>
-          <button class="bt d-flex justify-content-center align-items-center font-botao-menu-perfil" routerLink='/meus-conteudos'>Meus conteúdos</button>
-          <button class="bt d-flex justify-content-center align-items-center font-botao-menu-perfil" routerLink='/perfil-adicionar-videos'>Adicionar conteúdos</button>
-          <button class="bt d-flex justify-content-center align-items-center font-botao-menu-perfil"[routerLink]="['/usuario-edit', id]">Editar perfil</button>
-        </div>
+<div class="container-fluid">
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-4">
+      <app-menu-perfil class="fixo"></app-menu-perfil>
+    </div>
+    <div class="container-fluid d-flex">
+      <div class="row d-flex  mt-2 justify-content-center">
+        <h2 class="text-cente mt-4 font-800-titulo-telas d-flex justify-content-center">Bem-vindo ao Educação para
+          todes,
+          {{nome}}!</h2>
+        <p class="justify-content-center d-flex font-pv mb-5">Assista ao vídeo abaixo e descubra como compartilhar o seu
+          conhecimento:</p>
+        <div class="col-md-8 justify-content-center mt-1 margin-rodape d-flex video">
+          <iframe width="70%" height="250%" src="https://www.youtube.com/embed/joFSMgR-OEk" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
         </div>
       </div>
-    
-
-    <div class="col-md-8 justify-content-center mt-1 margin-rodape d-flex video">
-      <iframe width="70%" height="120%" src="https://www.youtube.com/embed/joFSMgR-OEk" title="YouTube video player"
-        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
     </div>
   </div>
 </div>
@@ -29,31 +27,7 @@
 
 
 
-<!-- <app-menu-superior></app-menu-superior>
-<div class="container-fluid d-flex bg-tela">
-  <div class="row d-flex bg-tela mt-2 justify-content-center">
-    <h1 class="text-center mb-5 mt-3">Bem-vindo a tela de visualização, assista aqui sua aula!</h1>  
 
-    <div class="col-md-4 mt-5 mb-4 ct">
-      <div class="row d-flex mt-2">
-        <h3 class="font-700-titulo-texto mt-2">Olá, {{nome}}!</h3>
-        <div class="col-md-6">
-          <button class="bt d-flex justify-content-center align-items-center font-botao-menu-perfil" routerLink='/feed'>Feed</button>
-          <button class="bt d-flex justify-content-center align-items-center font-botao-menu-perfil" routerLink='/meus-conteudos'>Meus conteúdos</button>
-          <button class="bt d-flex justify-content-center align-items-center font-botao-menu-perfil" routerLink='/perfil-adicionar-videos'>Adicionar conteúdos</button>
-          <button class="bt d-flex justify-content-center align-items-center font-botao-menu-perfil"[routerLink]="['/usuario-edit', id]">Editar perfil</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-8 col-fluid justify-content-center mt-1 mb-4">
-      <iframe width="590" height="350" src="https://www.youtube.com/embed/joFSMgR-OEk" title="YouTube video player"
-        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-    </div>
-  </div>
-</div>
-<app-rodape></app-rodape> -->
 
 
 

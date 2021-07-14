@@ -32,11 +32,17 @@
 .botao-adicionar{
     border-radius: 20px;
     padding: 10px;
-    margin-left: 220px;
+    margin-left: 35%;
     box-shadow: 1px 2px 10px rgb(159, 167, 164), 1px  2px 1px rgb(159, 167, 164);
     background-color: #20629d;
 
 }
+
+.fixo{
+    position: absolute;
+    top: 6;
+    left: 0;
+  }
 
 .batatinha{
 width: 30px;

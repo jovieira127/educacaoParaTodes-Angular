@@ -4,14 +4,34 @@
       <div class="row d-flex">
         <div class="col-md-4 mt-4">
           <button class="bt d-flex justify-content-center align-items-center font-botao-menu-perfil" routerLink='/feed'>Feed</button>
-          <button class="bt d-flex justify-content-center align-items-center font-botao-menu-perfil" routerLink='/meus-conteudos'>Meus conteúdos</button>
-          <button class="bt d-flex justify-content-center align-items-center font-botao-menu-perfil" routerLink='/perfil-adicionar-videos'>Adicionar conteúdos</button>
+          <button *ngIf='authService.voluntarie()'class="bt d-flex justify-content-center align-items-center font-botao-menu-perfil" routerLink='/meus-conteudos'>Meus conteúdos</button>
+          <button *ngIf='authService.voluntarie()' class="bt d-flex justify-content-center align-items-center font-botao-menu-perfil" routerLink='/perfil-adicionar-videos'>Adicionar conteúdos</button>
           <button class="bt d-flex justify-content-center align-items-center font-botao-menu-perfil"[routerLink]="['/usuario-edit', id]">Editar perfil</button>
         </div>
         </div>
       </div>
   </div>
 </div>
+
+<!-- <div class="container-fluid d-flex">
+  <div class="row d-flex  mt-2 justify-content-center">
+    <div class="col-md-1 mt-5 mb-4 ct">
+      <div class="row d-flex">
+        <div class="col-md-4 mt-4">
+          <button class="bt d-flex justify-content-center align-items-center font-botao-menu-perfil"
+            routerLink='/feed'>Feed</button>
+          <button *ngIf='authService.voluntarie()'
+            class="bt d-flex justify-content-center align-items-center font-botao-menu-perfil"
+            routerLink='/meus-conteudos'>Meus conteúdos</button>
+          <button *ngIf='authService.voluntarie()' class="bt d-flex justify-content-center align-items-center font-botao-menu-perfil"
+            routerLink='/perfil-adicionar-videos'>Adicionar conteúdos</button>
+          <button class="bt d-flex justify-content-center align-items-center font-botao-menu-perfil"
+            [routerLink]="['/usuario-edit', id]">Editar perfil</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
 
 
 

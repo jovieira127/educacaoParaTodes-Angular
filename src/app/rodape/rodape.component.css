@@ -8,7 +8,7 @@
   text-align: center;
   padding-top: 0px;
   margin-left: 25px;
-  font-size: small;
+  /* font-size: small; */
   line-height: 1.5; 
   text-align: justify;
 }
@@ -18,7 +18,7 @@
   text-align: center;
   padding-top: 45px;
   margin-left: 25px;
-  font-size: medium;
+ /*  font-size: medium; */
 
 }
 
@@ -27,5 +27,12 @@
   text-align: left;
   padding-top: 30px;
   margin-left: 25px;
-  font-size: small;
+  /* font-size: small; */
+}
+
+.font-600-pequeno{
+  font-family:'Lato', sans-serif;
+  font-weight: normal;
+  color: rgb(179, 179, 179);
+  font-size: 14px;
 }

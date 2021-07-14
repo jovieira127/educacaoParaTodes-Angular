@@ -256,3 +256,26 @@ width: 90%;
 border-style: solid 0.1rem;
 border-color: #20629d; /* azul #20629d */ /* cinza #212529 */
 }
+
+.font-900-titulo-telas{
+  font-family:'Lato', sans-serif;
+  font-weight: 900;
+  color:#202122;
+  font-size: 30px;
+}
+.font-700-titulo-texto{
+  font-family:'Lato', sans-serif;
+  font-weight: 700;
+  color: #202122;
+  font-size: 18px;
+
+}
+
+.font-pv{
+  font-family:'Lato', sans-serif;
+  font-weight: 400;
+  color:#3b3b3b; 
+  font-size: 16px;
+  /* line-height: 1.5; */
+
+}
