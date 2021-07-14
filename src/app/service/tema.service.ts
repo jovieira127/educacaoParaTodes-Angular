@@ -23,27 +23,27 @@ export class TemaService {
     }
   }
   getAllTema(): Observable<Tema[]>{
-    return this.http.get<Tema[]>(`https://educacaoparatodes.herokuapp.com/swagger-ui/#/tema-controller/GetAllUsingGET_1` , this.token)
+    return this.http.get<Tema[]>(`https://educacaoparatodes.herokuapp.com/temas` , this.token)
   }
   
   getByIdTema(id: number): Observable<Tema>{
-    return this.http.get<Tema>(`https://educacaoparatodes.herokuapp.com/swagger-ui/#/tema-controller/GetByIdUsingGET_1/${id}`, this.token)
+    return this.http.get<Tema>(`https://educacaoparatodes.herokuapp.com/temas/${id}`, this.token)
   } 
 
   getByDescricaoTema(descricao: string): Observable<Tema[]>{
-    return this.http.get<Tema[]>(`https://educacaoparatodes.herokuapp.com/swagger-ui/#/tema-controller/GetByDescricaoUsingGET/${descricao}` , this.token)
+    return this.http.get<Tema[]>(`https://educacaoparatodes.herokuapp.com/temas/descricao/${descricao}` , this.token)
   }
 
   postTema(tema: Tema): Observable<Tema>{
-    return this.http.post<Tema>(`https://educacaoparatodes.herokuapp.com/swagger-ui/#/tema-controller/postUsingPOST_1` ,tema, this.token)
+    return this.http.post<Tema>(`https://educacaoparatodes.herokuapp.com/temas` ,tema, this.token)
   }
 
   putTema(tema: Tema): Observable<Tema>{
-    return this.http.put<Tema>(`https://educacaoparatodes.herokuapp.com/swagger-ui/#/tema-controller/putUsingPUT_1` ,tema, this.token)
+    return this.http.put<Tema>(`https://educacaoparatodes.herokuapp.com/temas` ,tema, this.token)
   }
 
   deleteTema(id: number) {
-    return this.http.delete(`https://educacaoparatodes.herokuapp.com/swagger-ui/#/tema-controller/deleteUsingDELETE_1/${id}`, this.token)
+    return this.http.delete(`https://educacaoparatodes.herokuapp.com/temas/${id}`, this.token)
   }
   
 
