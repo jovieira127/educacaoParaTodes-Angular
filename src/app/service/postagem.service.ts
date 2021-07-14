@@ -22,27 +22,27 @@ export class PostagemService {
   }
 
   getByIdPostagem(id: number): Observable<Postagem> {
-    return this.http.get<Postagem>(`http://localhost:8080/postagens/${id}`, this.token)
+    return this.http.get<Postagem>(`https://educacaoparatodes.herokuapp.com/swagger-ui/#/postagem-controller/GetByIdUsingGET/${id}`, this.token)
   }
   
   getByTituloPostagem(titulo: string): Observable<Postagem[]> {
-    return this.http.get<Postagem[]>(`http://localhost:8080/postagens/titulo/${titulo}`, this.token)
+    return this.http.get<Postagem[]>(`https://educacaoparatodes.herokuapp.com/swagger-ui/#/postagem-controller/GetByTituloUsingGET/${titulo}`, this.token)
   }
 
 
   getAllPostagens(): Observable<Postagem[]> {
-    return this.http.get<Postagem[]>(`${this.uri}/postagens`, this.token)
+    return this.http.get<Postagem[]>(`https://educacaoparatodes.herokuapp.com/swagger-ui/#/postagem-controller/GetAllUsingGET`, this.token)
   }
 
   postPostagem(postagem: Postagem): Observable<Postagem> {
-    return this.http.post<Postagem>(`${this.uri}/postagens`, postagem, this.token)
+    return this.http.post<Postagem>(`https://educacaoparatodes.herokuapp.com/swagger-ui/#/postagem-controller/postUsingPOST`, postagem, this.token)
   }
 
   putPostagem(postagem: Postagem): Observable<Postagem> {
-    return this.http.put<Postagem>('http://localhost:8080/postagens', postagem, this.token)
+    return this.http.put<Postagem>('https://educacaoparatodes.herokuapp.com/swagger-ui/#/postagem-controller/putUsingPUT', postagem, this.token)
   }
 
   deletePostagem(id: number) {
-    return this.http.delete(`http://localhost:8080/postagens/${id}`, this.token)
+    return this.http.delete(`https://educacaoparatodes.herokuapp.com/swagger-ui/#/postagem-controller/deleteUsingDELETE/${id}`, this.token)
   }
 }

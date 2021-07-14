@@ -23,15 +23,15 @@ export class AuthService {
   }
 
   entrar(usuarioLogin: UsuarioLogin): Observable<UsuarioLogin>{
-    return this.http.post<UsuarioLogin>('http://localhost:8080/usuarios/login', usuarioLogin)
+    return this.http.post<UsuarioLogin>('https://educacaoparatodes.herokuapp.com/swagger-ui/#/usuario-controller/AutenticationUsingPOST', usuarioLogin)
   }
 
   cadastrar(usuario: Usuario): Observable<Usuario>{
-    return this.http.post<Usuario>('http://localhost:8080/usuarios', usuario)
+    return this.http.post<Usuario>('https://educacaoparatodes.herokuapp.com/swagger-ui/#/usuario-controller/PostUsingPOST', usuario)
   }
 
   getByIdUser(id: number): Observable<Usuario>{
-    return this.http.get<Usuario>(`http://localhost:8080/usuarios/${id}` )
+    return this.http.get<Usuario>(`https://educacaoparatodes.herokuapp.com/swagger-ui/#/usuario-controller/getByIdUsingGET/${id}` )
   }
 
   logado(){
