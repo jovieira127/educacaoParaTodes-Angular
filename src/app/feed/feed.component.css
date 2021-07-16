@@ -4,6 +4,12 @@
   align-content: space-between;
 }
 
+.bt-pesquisar{
+
+  color: white;
+  background-color: #ae84ff;
+}
+
 .card{
   width: 300px;
 }
@@ -42,12 +48,12 @@
 .ico{
   font-size: 20pt;
   display: inline-block;
-  
+
 }
 
-/* .bg-color{
-  background-color: rgb(29, 29, 29);
-} */
+.bg-color{
+  background-color: #f3e3f6;
+}
 
 .font-900-titulo-telas{
   font-family:'Lato', sans-serif;
@@ -77,16 +83,16 @@
   font-weight: lighter;
   color: #202122;
   font-size: 16px;
-} */
+} /
 
 .font-pv{
   font-family:'Lato', sans-serif;
   font-weight: 400;
   color:#3b3b3b; 
   font-size: 16px;
-  /* line-height: 1.5; */
+  / line-height: 1.5; */
 
-}
+
 
 .font-600-texto-form{
   font-family:'Lato', sans-serif;

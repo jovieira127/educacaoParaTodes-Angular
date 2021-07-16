@@ -1,5 +1,5 @@
-<app-menu-superior></app-menu-superior>
-<div class="container-fluid">
+<app-menu-superior class="navbar-inner"></app-menu-superior>
+<div class="container-fluid bg-color">
   <div class="row d-flex justify-content-center">
     <div class="col-md-4">
       <app-menu-perfil class="fixo"></app-menu-perfil>
@@ -33,25 +33,41 @@
             allowfullscreen></iframe>
         </div>
         <div class="card-body">
-          <h3 class="card-title font-700-titulo-texto">{{item.titulo}}</h3>
+          <div class="row">
+            <div class="col-md-6">
+              <h3 class="card-title font-800-titulo-telas">{{item.titulo}}</h3>
+            </div>
+            <div class="col-md-4 d-flex justify-content-end">
+              <p class="card-text font-600-pequeno"><small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date:
+                'HH:mm'}}</small>
+            </p>
+            </div>
+            <div class="col-md-2 d-flex justify-content-end">
+              <a [routerLink]="['/postagem-delete', item.id]">
+                <i class="fa fa-trash me-4 ico" aria-hidden="true"></i>
+              </a>
+              <a [routerLink]="['/postagem-edit', item.id]">
+                <i class="fa fa-pencil ico" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
           <h5 class="card-title font-pv">Tema: {{item.tema.descricao}}</h5>
-          <p class="card-text font-pv">{{item.texto}}</p>
-          <p class="card-text font-600-pequeno"><small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date:
-              'HH:mm'}}</small>
-          </p>
+          <p class="card-text font-pv">Descrição: {{item.texto}}</p>
+          <p class="card-text font-pv">Material complementar: {{item.descricaoPostagem}}</p>
+          
           <div>
             <a href="{{item.linkExercicio}}" target="_blank"><i class="fa fa-file-text-o ico me-4" aria-hidden="true"></i></a>
           </div>
 
-          <div>
-            <button class="btn btn-outline-danger mt-4 botao-editar me-4" [routerLink]="['/postagem-delete', item.id]"
-              data-bs-dismiss="modal">Apagar</button>
-              <button class="btn btn-outline-primary me-3 mt-4 botao-editar" [routerLink]="['/postagem-edit', item.id]"
-              data-bs-dismiss="modal">Editar</button>
-          </div>
+
+         
           
         </div>
 
+      </div>
+      <div *ngIf='usuario.postagens.length == 0'>
+        <h3> Você ainda não tem nenhum conteúdo postado.</h3>
+        <img src="https://i.imgur.com/LyfIjSf.png" alt="" width="70%" height="100%">
       </div>
 
     </div>
@@ -59,3 +75,8 @@
   </div>
 </div>
 <app-rodape></app-rodape>
+
+<!-- <button class="btn btn-outline-danger mt-4 botao-editar me-4" [routerLink]="['/postagem-delete', item.id]"
+              data-bs-dismiss="modal">Apagar</button> -->
+      <!-- <button class="btn btn-outline-primary me-3 mt-4 botao-editar" [routerLink]="['/postagem-edit', item.id]"
+              data-bs-dismiss="modal">Editar</button> -->

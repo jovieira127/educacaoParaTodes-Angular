@@ -1,149 +1,160 @@
 <app-menu-superior></app-menu-superior>
 
 <!-- Formulario Cadastrar Conteudo -->
-<div class="container-fluid">
-  <div class="row">
 
-    <div class="col-md-4">
-      <app-menu-perfil class="fixo"></app-menu-perfil>
-    </div>
+<div class="bg-color">
 
-    <div class="col-md-6 mt-5 d-flex">
 
-      <div class="form-group margin">
-        <div class="mb-3">
-          <h3 class="text-center fw-2 mt-3 mb-4 font-700-titulo-texto">Poste seu Conteúdo! </h3>
-          <label for="exampleInputEmail1" class="form-label mt-4 font-600-texto-form">Título do vídeo</label>
-          <input [(ngModel)]='postagem.titulo' type="text" class="form-control" id="exampleInputEmail1"
-            aria-describedby="emailHelp">
-          <div id="emailHelp" class="form-text"></div>
-        </div>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label font-600-texto-form">Descricao do vídeo</label>
-          <input [(ngModel)]='postagem.texto' type="text" class="form-control" id="exampleInputEmail1"
-            aria-describedby="emailHelp">
-          <div id="emailHelp" class="form-text font-600-pequeno">Faça uma breve descrição do vídeo</div>
-        </div>
+  <div class="container-fluid">
+    <div class="row">
 
-        <!--  TEMA -->
+      <div class="col-md-4">
+        <app-menu-perfil class="fixo"></app-menu-perfil>
+      </div>
 
-        <div class="form-group mb-5 mt-3 font-600-texto-form">
-          <label for="tipo">
-            Tema
-            <a data-bs-toggle="modal" data-bs-target="#exampleModal">
-              <i class="fa fa-pencil" aria-hidden="true"></i>
-            </a>
-          </label>
+      <div class="col-md-6 mt-5 d-flex">
 
-          <select [(ngModel)]='idTema' class="form-control font-600-texto-form" name="tema" id="tema" (change)='findByIdTema()'>
-            <option value="selecaoTema">Selecione o tema</option>
-            <option *ngFor='let tema of listaTemas' value="{{tema.id}}">
-              {{tema.descricao}}
-            </option>
+        <div class="form-group margin bg-form">
+          <div class="mb-3">
+            <h3 class="text-center fw-2 mt-3 mb-4 font-700-titulo-texto">Poste seu Conteúdo! </h3>
+            <label for="exampleInputEmail1" class="form-label mt-4 font-600-texto-form">Título do vídeo</label>
+            <input [(ngModel)]='postagem.titulo' type="text" class="form-control" id="exampleInputEmail1"
+              aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text"></div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label font-600-texto-form">Descricao do vídeo</label>
+            <input [(ngModel)]='postagem.texto' type="text" class="form-control" id="exampleInputEmail1"
+              aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text font-600-pequeno">Faça uma breve descrição do vídeo</div>
+          </div>
 
-          </select>
-          <a href="" data-bs-toggle="modal" data-bs-target="#cadastrar">Cadastrar novo tema</a>
+          <!--  TEMA -->
 
-          <!-- <a class="btn btn-light me-2" data-bs-toggle="modal" data-bs-target="#cadastrar" >Cadastrar novo
+          <div class="form-group mb-5 mt-3 font-600-texto-form">
+            <label for="tipo">
+              Tema
+              <a data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <i class="fa fa-pencil" aria-hidden="true"></i>
+              </a>
+            </label>
+
+            <select [(ngModel)]='idTema' class="form-control font-600-texto-form" name="tema" id="tema"
+              (change)='findByIdTema()'>
+              <option value="selecaoTema">Selecione o tema</option>
+              <option *ngFor='let tema of listaTemas' value="{{tema.id}}">
+                {{tema.descricao}}
+              </option>
+
+            </select>
+            <a href="" data-bs-toggle="modal" data-bs-target="#cadastrar">Cadastrar novo tema</a>
+
+            <!-- <a class="btn btn-light me-2" data-bs-toggle="modal" data-bs-target="#cadastrar" >Cadastrar novo
               Tema</a>  -->
-        </div>
-
-        <!-- FIM TEMA -->
-
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label font-600-texto-form">Sugestões de material complementar</label>
-          <input [(ngModel)]='postagem.descricaoPostagem' type="text" class="form-control font-600-texto-form" id="exampleInputEmail1"
-            aria-describedby="emailHelp">
-          <div id="emailHelp" class="form-text font-600-pequeno"> Insira nome de livros, vídeos ou outros materias relacionados ao assunto</div>
-        </div>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label font-600-texto-form">Link do vídeo</label>
-          <input [(ngModel)]='postagem.linkVideo' type="text" class="form-control font-600-texto-form" id="exampleInputEmail1"
-            aria-describedby="emailHelp">
-          <div id="emailHelp" class="form-text font-600-pequeno">Insira o link do vídeo</div>
-        </div>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label font-600-texto-form">Lista de exercícios</label>
-          <input [(ngModel)]='postagem.linkExercicio' type="text" class="form-control font-600-texto-form" id="exampleInputEmail1"
-            aria-describedby="emailHelp">
-          <div id="emailHelp" class="form-text font-600-pequeno">Se você deseja passar exercícios para os estudantes, insira aqui um link
-            de
-            um documento do Google Drive que esteja disponível no modo de leitura.</div>
-        </div>
-
-        <button type="submit" class="btn btn mt-5 mb-5 d-flex justify-content-center botao-adicionar font-600-texto-botao"
-          (click)='publicar()'>Adicionar Conteúdo</button>
-
-        <!--  comentario routerLink = '/meus-conteudos' deve estar no final de publicar() ts -->
-
-      </div>
-    </div>
-  </div>
-
-</div>
-<app-rodape></app-rodape>
-
-
-
-
-
-<!-- Modal Editar Tema -->
-<div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" aria-labelledby="myLargeModalLabel"
-  aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Editar tema</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="container">
-          <div class="row mt-5">
-            <div class="col-md-12">
-              <h2 class="text-center">Todos os temas</h2>
-            </div>
           </div>
 
-          <div class="row mt-3 mb-5 d-flex justify-content-center">
-            <div class="col-md-6 d-flex justify-content-center">
+          <!-- FIM TEMA -->
 
-              <table class="table table-hover">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Temas</th>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label font-600-texto-form">Sugestões de material
+              complementar</label>
+            <input [(ngModel)]='postagem.descricaoPostagem' type="text" class="form-control font-600-texto-form"
+              id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text font-600-pequeno"> Insira nome de livros, vídeos ou outros materias
+              relacionados ao assunto</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label font-600-texto-form">Link do vídeo</label>
+            <input [(ngModel)]='postagem.linkVideo' type="text" class="form-control font-600-texto-form"
+              id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text font-600-pequeno">Insira o link do vídeo</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label font-600-texto-form">Lista de exercícios</label>
+            <input [(ngModel)]='postagem.linkExercicio' type="text" class="form-control font-600-texto-form"
+              id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text font-600-pequeno">Se você deseja passar exercícios para os estudantes,
+              insira aqui um link
+              de
+              um documento do Google Drive que esteja disponível no modo de leitura.</div>
+          </div>
 
-                  </tr>
-                </thead>
+          <button type="submit"
+            class="btn btn mt-5 mb-5 d-flex justify-content-center botao-adicionar font-600-texto-botao"
+            (click)='publicar()'>Adicionar Conteúdo</button>
 
-                <tbody>
-                  <tr *ngFor='let item of listaTemas'>
-                    <th>{{item.id}}</th>
-                    <td>{{item.descricao}}</td>
-                    <td class="d-flex justify-content-end">
-                      <i class="fa fa-pencil batatinha" aria-hidden="true" [routerLink]="['/tema-edit', item.id]" data-bs-dismiss="modal"></i>
+          <!--  comentario routerLink = '/meus-conteudos' deve estar no final de publicar() ts -->
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <app-rodape></app-rodape>
+
+
+
+
+
+  <!-- Modal Editar Tema -->
+  <div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Editar tema</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="row mt-5">
+              <div class="col-md-12">
+                <h2 class="text-center">Todos os temas</h2>
+              </div>
+            </div>
+
+            <div class="row mt-3 mb-5 d-flex justify-content-center">
+              <div class="col-md-6 d-flex justify-content-center">
+
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Temas</th>
+
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr *ngFor='let item of listaTemas'>
+                      <th>{{item.id}}</th>
+                      <td>{{item.descricao}}</td>
+                      <td class="d-flex justify-content-end">
+                        <i class="fa fa-pencil batatinha" aria-hidden="true" [routerLink]="['/tema-edit', item.id]"
+                          data-bs-dismiss="modal"></i>
                         <!-- <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" aria-labelledby="exampleModalLabel">Apagar</button> -->
-                      <i class="fa fa-trash batatinha" aria-hidden="true" [routerLink]="['/tema-delete', item.id]" data-bs-dismiss="modal"></i>
+                        <i class="fa fa-trash batatinha" aria-hidden="true" [routerLink]="['/tema-delete', item.id]"
+                          data-bs-dismiss="modal"></i>
 
-                    </td>
-                  </tr>
+                      </td>
+                    </tr>
 
-                </tbody>
-              </table>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<!-- Model Delete -->
-
+  <!-- Model Delete -->
 
 
-<!-- Modal Não Sei De Que -->
-<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+  <!-- Modal Não Sei De Que -->
+  <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -161,7 +172,7 @@
   </div>
 </div> -->
 
-<!-- <div class="modal" tabindex="-1" id="#exampleModal" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <!-- <div class="modal" tabindex="-1" id="#exampleModal" data-bs-toggle="modal" data-bs-target="#exampleModal">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -179,30 +190,32 @@
   </div>
 </div> -->
 
-<!-- Modal Cadastrar Tema -->
-<div class="modal fade" id="cadastrar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Cadastro de Tema</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-
-      <div class="modal-body">
-        <div class="form-group">
-          <label for="titulo">Título</label>
-          <input [(ngModel)]='tema.descricao' type="text" class="form-control" id="titulo" placeholder="título">
+  <!-- Modal Cadastrar Tema -->
+  <div class="modal fade" id="cadastrar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Cadastro de Tema</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
 
-      </div>
-      <div class="modal-footer d-flex justify-content-center">
-        <button type="button" class="btn btn-outline-primary botao-cadastrar-tema-cancelar" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" (click)='cadastrar()' class="btn text-white botao-cadastrar-tema-salvar" data-bs-dismiss="modal">Salvar </button>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="titulo">Título</label>
+            <input [(ngModel)]='tema.descricao' type="text" class="form-control" id="titulo" placeholder="título">
+          </div>
+
+        </div>
+        <div class="modal-footer d-flex justify-content-center">
+          <button type="button" class="btn btn-outline-primary botao-cadastrar-tema-cancelar"
+            data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" (click)='cadastrar()' class="btn text-white botao-cadastrar-tema-salvar"
+            data-bs-dismiss="modal">Salvar </button>
+        </div>
       </div>
     </div>
   </div>
 </div>
-
 
 
 <!-- <tbody>

@@ -1,19 +1,18 @@
-.img-bg{
-    background: url(https://i.imgur.com/4plTLKm.jpg);
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 
+
+.bg-color{
+/* background-color: #f3e3f6; */
+min-height: 900px;
+    
 }
 
 .container{
-    width: 350 px;
-    background: rgba(100, 97, 112, 0.527);
+    /* width: 350 px; */
+    background: rgba(243, 240, 251, 0.918);
     border-radius: 20px; 
-    box-shadow: 1px 2px 10px #000, 3px  6px 20px #000;
+    box-shadow: 1px 2px 10px rgb(181, 161, 187), 3px  6px 20px rgb(181, 161, 187);
     padding: 50px 20px;
+    
 }
 
 .backgroundInput{
@@ -22,8 +21,8 @@
     background: transparent;
     border: none;
     outline: none;
-    border: 1px solid #dcdbd1;
-    color: #fff;
+    border: 1px solid #d0b7e7;
+    color: rgb(100, 100, 100);
     border-radius: 20px;
 
 }
@@ -38,14 +37,14 @@ label{
  
     top:0;
     left:0;
-    color:#dcdbd1;
+    color:rgb(100, 100, 100);
     margin-left: 1px;
 
 }
 
 .fa{
     padding: 2px;
-    color: #dcdbd1;
+    color: rgb(100, 100, 100);
     margin-bottom: 5px;
 
 }
@@ -56,7 +55,7 @@ input:focus{
 }
 
 input::placeholder{
-    color: #dcdbd1;
+    color: rgb(100, 100, 100);
     margin: 10%;
 }
 
@@ -64,8 +63,8 @@ button{
     padding: 10px 50px;
     margin: 20px;
     background: transparent;
-    border: 2px solid #dcdbd1;
-    color:white;
+    border: 2px solid #b090d4;
+    color:rgb(100, 100, 100);
     text-transform: uppercase;
     border-radius: 20px;
     cursor: pointer;
@@ -78,5 +77,5 @@ button:hover{
 }
 
 .text-color{
-    color: white;
+    color: rgb(100, 100, 100);
 }

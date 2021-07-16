@@ -14,18 +14,11 @@
       <div class="mt-4 mb-4">
         <div class="form-group d-flex wd">
           <input [(ngModel)]='tituloPost' class="form-control me-2 shadow-card" type="text" placeholder="Pesquisar">
-          <button class="btn btn-outline-danger shadow-card" type="submit" (click)='findByTituloPostagem()'><i
+          <button class="btn bt-pesquisar shadow-card" type="submit" (click)='findByTituloPostagem()'><i
               class="fa fa-search form-control-feedback"></i></button>
         </div>
       </div>
       <!-- /Menu Pesquisar -->
-
-
-
-      <!-- sugestões -->
-      
-      <!-- /sugestões -->
-
 
       <div class="card mb-5 wd d-flex mt-5 shadow-card" *ngFor='let item of listaPostagens | orderBy: key: reverse'>
         <div class="card-img-top">
@@ -35,17 +28,24 @@
             allowfullscreen></iframe>
         </div>
         <div class="card-body">
-          <h3 class="card-title font-700-titulo-texto">{{item.titulo}}</h3>
-          <h5 class="card-title font-pv">Tema: {{item.tema.descricao}}</h5>
-          <p class="card-text font-pv">{{item.texto}}</p>
-          <p class="card-text font-600-pequeno"><small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date:
-              'HH:mm'}}</small>
-              </p>
-              <div>
-                <a href="{{item.linkExercicio}}" target="_blank"><i class="fa fa-file-text-o ico me-4" aria-hidden="true"></i></a>
-                <i class="fa fa-thumbs-o-up ico me-4" aria-hidden="true"></i>
-                <i class="fa fa-comments-o ico me-4" aria-hidden="true"></i>
-              </div>
+          <div class="row">
+            <div class="col-md-6">
+              <h3 class="card-title font-800-titulo-telas">{{item.titulo}}</h3>
+            </div>
+            <div class="col-md-3 d-flex justify-content-end">
+              <p class="card-text font-600-pequeno"><small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date:
+                'HH:mm'}}</small>
+            </p>
+            </div>
+          </div>
+        <h5 class="card-title font-pv">Tema: {{item.tema.descricao}}</h5>
+        <p class="card-text font-pv">Descrição: {{item.texto}}</p>
+        <p class="card-text font-pv">Material complementar: {{item.descricaoPostagem}}</p>
+        
+        <div>
+          <a href="{{item.linkExercicio}}" target="_blank"><i class="fa fa-file-text-o ico me-4" aria-hidden="true"></i></a>
+        </div>
+              
         </div>
 
       </div>

@@ -1,6 +1,14 @@
 .tamanho-menu {
     width: 300px;
 }
+
+.bg-color{
+background-color: #f3e3f6;
+}
+
+.bg-form{
+    background-color: white;
+}
 .borda-btn{
     border-radius: 10px;
 }
@@ -75,7 +83,7 @@ height: 30px;
 .font-700-titulo-texto{
     font-family:'Lato', sans-serif;
     font-weight: 700;
-    color: #202122;
+    color: #20629d;
     font-size: 22px;
 
 }

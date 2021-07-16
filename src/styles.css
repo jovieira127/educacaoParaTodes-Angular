@@ -4,52 +4,7 @@
 html, body { height: 100%;  width: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-/* .font-900-titulo-telas{
-    font-family:'Lato', sans-serif;
-    font-weight: 900;
-    color:white;
-    font-size: 30px;
+*{
+    margin: 0;
+    padding: 0;
 }
-
-.font-700-titulo-texto{
-    font-family:'Lato', sans-serif;
-    font-weight: 700;
-    color: #202122;
-    font-size: 22px;
-
-}
-
-.font-600-texto{
-    font-family:'Lato', sans-serif;
-    font-weight: lighter;
-    color: #202122;
-    font-size: 16px;
-}
-
-.font-600-texto-form{
-    font-family:'Lato', sans-serif;
-    font-weight: normal;
-    color: #202122;
-    font-size: 16px;
-}
-
-/* .font-600-texto-botao{
-    font-family:'Lato', sans-serif;
-    font-weight: 900;
-    color: white;
-    font-size: 16px;
-} */
-
-/* .font-600-pequeno{
-    font-family:'Lato', sans-serif;
-    font-weight: normal;
-    color: rgb(122, 122, 122);
-    font-size: 14px;
-}
-
-.font-botao-menu-perfil{
-    font-family:'Lato', sans-serif;
-    font-weight: 600;
-    color: #202122;
-    font-size: 14px;
-}  */

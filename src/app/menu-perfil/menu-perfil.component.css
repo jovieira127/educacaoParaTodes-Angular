@@ -1,67 +1,4 @@
-.tamanho-menu {
-    width: 300px;
-}
 
-
-.margen-titulo {
-    margin: 25px;
-}
-
-.margen-discricao {
-    margin: 35;
-}
-
-.margen-cards {
-    margin: 15px;
-}
-
-.margen-fotos {
-    margin: 30px;
-}
-
-.borda-botao {
-    border-radius: 30px;
-}
-
-.cor-letra {
-    color: white;
-}
-
-.button {
-    border-radius: 20px;
-    width: 225px;
-    margin-bottom: 5px;
-}
-
-.bg-color{
-    background-color: rgb(243, 243, 243);
-}
-
-.tamanho-menu {
-    width: 300px;
-}
-
-.margen-titulo {
-    margin: 25px;
-}
-
-
-.button {
-    border-radius: 20px;
-    width: 330px;
-    /* margin-left: 250px; */
-    background-color: #20629d;
-    margin-left: 15%;
-}
-
-.bt-grande{
-    width: 500px;
-    height: 80px;
-    background-color: #6099ca;
-    margin-right: 0%;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-}
 
 .bt{
     border-radius: 20px;
@@ -88,6 +25,7 @@
     border: solid 0.1rem gray;
     background-color: #ae84ff;
     margin-right: 130px;
+    margin-left: 20%;
     box-shadow: 1px 2px 10px rgb(159, 167, 164), 1px  2px 1px rgb(159, 167, 164);
 
 }
