@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Usuario } from '../model/Usuario';
+import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
 
 @Component({
@@ -23,7 +24,8 @@ export class MenuPerfilComponent implements OnInit {
   constructor(
     private router: Router,
     public authService: AuthService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private alerta: AlertasService
 
   ) { }
 
@@ -62,12 +64,12 @@ export class MenuPerfilComponent implements OnInit {
     this.usuario.tipo = this.tipoUsuario
 
     if(this.usuario.senha != this.senhaConfirmada){
-      alert('As senhas estão diferentes!')
+      this.alerta.showAlertDanger('As senhas estão diferentes!')
     }else{
       this.authService.cadastrar(this.usuario).subscribe((resp: Usuario) => {
         this.usuario = resp
         this.router.navigate(['/perfil-voluntario'])
-        alert('Usuário atualizado com sucesso! Faça o login novamente.')
+        this.alerta.showAlertSuccess('Usuário atualizado com sucesso! Faça o login novamente.')
         environment.token = ''
         environment.nome = ''
         environment.foto = ''
